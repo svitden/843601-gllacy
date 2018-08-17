@@ -145,12 +145,18 @@
 
         <!-- Поле электронной почты -->
         <p>Электронная почта</p>
-        <span class="button subscribe-button">Отправить</span>
+        <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
+          <p>
+            <label class="visually-hidden" for="subscribe">Электронная почта</label>
+            <input class="user-subscribe" id="subscribe" type="text" name="subscribe" placeholder="Электронная почта">
+          </p>
+        </form>
+        <button class="button subscribe-button" type="submit">Отправить</button>
       </section>
 
       <section class="map">
         <h2 class="visually-hidden">Как добраться на карте</h2>
-        <img src="img/map.jpg" width="1200" height="430" alt="Как добраться на карте">
+        <img src="img/map.jpg" width="1200" height="430" alt="Наш адрес: ул. Большая Конюшенная 19/8, Санкт-Петербург">
 
         <div class="feedback-form">
           <h2 class="visually-hidden">Обратная связь</h2>
@@ -163,7 +169,7 @@
             8 812 450-25-25<br>
             (с 10 до 20 ежедневно)
           </p>
-          <span class="button feedback-button">Форма обратной связи</span>
+          <button class="button feedback-button" type="button">Форма обратной связи</button>
         </div>
       </section>
 
@@ -193,32 +199,58 @@
     <section class="modal modal-login">
       <h2 class="visually-hidden">Личный кабинет</h2>
 
-      <!-- Здесь будет форма: "Электронная почта  Пароль"-->
-
-      <a class="button" href="#">Войти</a>
+      <!-- форма: "Электронная почта  Пароль"-->
+      <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label class="visually-hidden" for="user-email">Электронная почта</label>
+          <input class="user-email" id="user-email" type="email" name="email" placeholder="Электронная почта">
+        </p>
+        <p>
+          <label class="visually-hidden" for="user-password">Пароль</label>
+          <input class="user-password" id="user-password" type="password" name="password" placeholder="Пароль">
+        </p>
+      </form>
+      <button class="button" type="submit">Войти</button>
       <ul>
         <li><a href="#">Забыли пароль?</a></li>
         <li><a href="#">Новая регистрация</a></li>
       </ul>
-      <span class="modal-close">x</span>
+      <button class="modal-close" type="button">Закрыть</button>
     </section>
 
     <section class="modal modal-search">
       <h2 class="visually-hidden">Поиск по сайту</h2>
 
-      <!-- Здесь будет форма: "Что ищем?"" -->
-
-      <span class="modal-close">x</span>
+      <!-- форма: "Что ищем?"" -->
+      <form class="modal-search" action="https://echo.htmlacademy.ru" method="get">
+        <p>
+          <label class="visually-hidden" for="search-field">Поле поиска</label>
+          <input class="search-field" id="search-field" type="search" name="search" placeholder="Что ищем?">
+      </form>
+      <button class="modal-close" type="button">Закрыть</button>
     </section>
 
     <section class="modal modal-feedback">
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <p><b>Мы обязательно вам ответим!</b></p>
 
-      <!-- Здесь будет форма: "Как вас зовут? Ваша почта для ответа? Напишите что-нибудь?" Запомнить это место) -->
-
-      <span class="button feedback-button-send">Отправить</span>
-      <span class="modal-close">x</span>
+      <!-- форма: "Как вас зовут? Ваша почта для ответа? Напишите что-нибудь?"  -->
+      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label class="visually-hidden" for="user-name">Ваше имя</label>
+          <input class="user-name" id="user-name" type="text" name="name" placeholder="Как вас зовут?">
+        </p>
+        <p>
+          <label class="visually-hidden" for="feedback-email">Ваша почта</label>
+          <input class="feedback-email" id="feedback-email" type="email" name="feedback-email" placeholder="Ваша почта для ответа?">
+        </p>
+        <p>
+          <label class="visually-hidden" for="comment-field">Напишите комментарий</label>
+          <textarea class="comment-field" id="comment-field" name="comment" rows="5" placeholder="Напишите что-нибудь?"></textarea>
+        </p>
+      </form>
+      <button class="button feedback-button-send" type="submit">Отправить</button>
+      <button class="modal-close" type="button">Закрыть</button>
     </section>
 
   </body>
