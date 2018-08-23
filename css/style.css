@@ -15,6 +15,9 @@ a {
   text-decoration: none;
 }
 
+
+/* ----- HEADER ----- */
+
 .main-navigation {
   font-weight: 700;
   font-size: 14px;
@@ -22,12 +25,11 @@ a {
   color: #ffffff;
 }
 
+
+/* ----- Site-navigation ----- */
+
 .site-navigation,
-.user-navigation,
-.sub-menu,
-.button-slider,
-.banners-list,
-.hits-list {
+.user-navigation {
   list-style: none;
 }
 
@@ -49,6 +51,13 @@ a {
   color: #323232;
 
   background-color: #f8f7f4;
+}
+
+
+/* ----- Sub-menu ----- */
+
+.sub-menu {
+  list-style: none;
 }
 
 .sub-menu {
@@ -75,6 +84,9 @@ a {
   font-weight: 700;
 }
 
+
+/* ----- User-navigation ----- */
+
 .user-navigation a {
   font-weight: 500;
   font-size: 14px;
@@ -96,11 +108,21 @@ a {
   line-height: 24px;
 }
 
+
+/* ----- MAIN ----- */
+
 .slide {
   font-weight: 700;
   font-size: 60px;
   line-height: 60px;
   color: #ffffff;
+}
+
+
+/* ----- Buttons----- */
+
+.button-slider {
+  list-style: none;
 }
 
 .button {
@@ -112,7 +134,8 @@ a {
   text-align: center;
   color: #ffffff;
 
-  background-image: linear-gradient(#f26843, #e74a35);
+  background-image:
+    linear-gradient(#f26843, #e74a35);
   border: none;
 }
 
@@ -127,6 +150,13 @@ a {
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)),
     linear-gradient(#e74a35, #f26843);
+}
+
+
+/* ----- Banners section----- */
+
+.banners-list {
+  list-style: none;
 }
 
 .banners-item h3 {
@@ -157,6 +187,13 @@ a {
   background-position: 0 0;
 }
 
+
+/* ----- Hits-item section----- */
+
+.hits-list {
+  list-style: none;
+}
+
 .hits-item a {
   color: #ffffff;
 }
@@ -178,6 +215,14 @@ a {
   font-size: 30px;
   line-height: 45px;
 }
+
+.hits-item:hover {
+  background-color: rgba(248, 247, 244, 0.2);
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+/* ----- About-us section----- */
 
 .about-us {
   color: #323232;
@@ -204,6 +249,9 @@ a {
   line-height: 22px;
 }
 
+
+/* ----- New-post article----- */
+
 .new-post {
   color: #323232;
 
@@ -222,6 +270,9 @@ a {
   line-height: 30px;
   color: #323232;
 }
+
+
+/* ----- Subscribe section----- */
 
 .subscribe {
   color: #5a5a5a;
@@ -242,14 +293,15 @@ a {
   border: 1px solid rgba(178, 178, 178, 0.52);
 }
 
-.feedback-form {
-  background-color: #fefefe;
-}
+
+/* ----- Feedback-form section ----- */
 
 .feedback-form {
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
+
+  background-color: #ffffff;
 }
 
 .feedback-form-address b {
@@ -264,10 +316,13 @@ a {
   line-height: 22px;
 }
 
+
+/* ----- FOOTER ----- */
+
 .main-footer {
-  color: #ffffff;
   font-weight: 400;
   line-height: 18px;
+  color: #ffffff;
 }
 
 .main-footer a {
@@ -283,9 +338,270 @@ a {
   font-weight: 700;
 }
 
-.footer-copyright p{
+.footer-copyright p {
   font-size: 12px;
 }
 
+.footer-info a:hover,
+.footer-info a:focus,
+.footer-info a:active {
+  color: #ffbc9e;
+}
+
+/* ----- MODALS ----- */
+
+.modal {
+  color: #323232;
+
+  background-color: #f8f7f4;
+}
+
+.modal input {
+  font: inherit;
+
+  background-color: #ffffff;
+  border: 1px solid rgba(178, 178, 178, 0.52);
+}
+
+.modal input:hover {
+  border: 2px solid rgba(154, 154, 154, 0.52);
+}
+
+.modal input:focus {
+  border: 2px solid rgba(46, 136, 228, 0.52);
+}
 
 
+/* ----- Login modal ----- */
+
+.modal-login-list {
+  list-style: none;
+}
+
+.modal-login-list a {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+  color: #323232;
+}
+
+
+/* ----- Feedback modal ----- */
+
+.modal-feedback > p {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+
+/* --------------- CATALOG PAGE -------------- */
+
+.catalog-page {
+  color: #ffffff;
+}
+
+
+/* ----- HEADER ----- */
+
+.site-navigation-current {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+
+  background-color: #d07058;
+}
+
+/* ----- MAIN ----- */
+
+.page-title {
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 41px;
+}
+
+
+/* ----- Breadcrumbs ----- */
+
+.breadcrumbs {
+  list-style: none;
+}
+
+.breadcrumbs a {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus,
+.breadcrumbs a:active {
+  color: #ffbc9e;
+}
+
+/* !!! будет без подчёркивания */
+
+
+.breadcrumbs-current a:hover,
+.breadcrumbs-current a:focus,
+.breadcrumbs-current a:active {
+  color: #ffffff;
+}
+
+/* ----- Filters section ----- */
+
+.filter fieldset {
+  border: none;
+}
+
+.filters-list {
+  list-style: none;
+}
+
+.filter legend {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.filter-option {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.filter-option:hover,
+.filter-option:focus {
+  color: #323232;
+}
+
+.filter-button {
+  font: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  vertical-align: middle;
+  text-align: center;
+  color: #ffffff;
+
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgb(255, 255, 255);
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  color: #323232;
+
+  background-color: #ffffff;
+}
+
+.filter-button:active {
+  color: #323232;
+
+  background-color: #ededed;
+  box-shadow: inset 0 2px 1px 0 rgba(105, 105, 105, 0.2);
+}
+
+
+/* ----- Catalog section ----- */
+
+.catalog-list {
+  list-style: none;
+}
+
+.catalog-item:hover {
+  background-color: rgba(248, 247, 244, 0.2);
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.catalog-item a {
+  color: #ffffff;
+}
+
+.catalog-item h3 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.catalog-item-price {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 45px;
+}
+
+.catalog-item-price span {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 45px;
+}
+
+
+/* ----- Pagination ----- */
+
+.pagination-list {
+  list-style: none;
+}
+
+.pagination-list a {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: #ffffff;
+}
+
+.pagination-list a:hover,
+.pagination-list a:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.pagination-list a:active {
+  color: #323232;
+
+  background-color: #ffffff;
+}
+
+.pagination-item-current a {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: #323232;
+
+  background-color: #ffffff;
+}
+
+.pagination-item-current a:hover,
+.pagination-item-current a:focus
+.pagination-item-current a:active {
+  color: #323232;
+
+  background-color: #ffffff;
+}
+
+
+/* ----- Cart modal ----- */
+
+.modal-cart-list {
+  list-style: none;
+}
+
+.modal-cart {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.modal-cart h3 {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.modal-cart-list span {
+  color: #999999;
+}
+
+.modal-cart-total b {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+}
