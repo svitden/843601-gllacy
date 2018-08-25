@@ -754,6 +754,8 @@ a {
   min-height: 220px;
 }
 
+/* ----- footer ----- */
+
 .main-footer {
   display: flex;
   justify-content: space-between;
@@ -783,10 +785,82 @@ a {
   margin: 0 auto;
 }
 
+/* ----- catalog-page ----- */
+
+.container-catalog-page {
+  width: 1146px;
+  margin: 0 auto;
+  padding: 0 27px;
+}
+
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
+}
+
+.page-title {
+  margin: 0;
+  padding: 0;
+}
+
+/* ----- filters ----- */
+
+.filters {
+  margin: 0;
+  padding: 0;
+}
+
+.filters-wrapper {
+  display: flex;
+}
+
+.filters-list {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* ----- catalog ----- */
+
+.catalog-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.catalog-item {
+  width: 267px;
+  min-height: 342px;
+  margin-right: 26px;
+}
+
+.catalog-item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.catalog-item-price {
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-item-price h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.pagination-list {
+  margin: 0;
+  padding: 0;
+}
+
 /* тут временные цветные рамки*/
 .main-header,
 .container,
-.main-footer {
+.main-footer,
+.catalog-page,
+.container-catalog-page {
   outline: 2px solid  rgba(0, 102, 255, 0.7); /*синий*/
 }
 .main-navigation,
@@ -799,7 +873,12 @@ a {
 .map,
 .footer-social,
 .footer-info,
-.footer-copyright {
+.footer-copyright,
+.page-title,
+.breadcrumbs,
+.filters,
+.catalog,
+.pagination-list {
   outline: 2px solid  rgba(0, 255, 240, 0.7); /*голубой*/
 }
 .banners-list {
