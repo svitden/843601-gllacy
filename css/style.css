@@ -135,21 +135,24 @@ a {
   color: #ffffff;
 
   background-image:
-    linear-gradient(#f26843, #e74a35);
+    linear-gradient(to bottom, #f26843, #e74a35);
+  box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
   border: none;
 }
 
 .button:hover,
 .button:focus {
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
-    linear-gradient(#f26843, #e74a35);
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+    linear-gradient(to bottom, #f26843, #e74a35);
+  box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 1);
 }
 
 .button:active {
   background-image:
-    linear-gradient(rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)),
-    linear-gradient(#e74a35, #f26843);
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)),
+    linear-gradient(to bottom, #e74a35, #f26843);
+  box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 0.004);
 }
 
 
@@ -229,7 +232,7 @@ a {
 
   background-color: #ece0c6;
   background-image: url("../img/waffle-pattern.jpg");
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
   background-position: 0 0;
 }
 
@@ -356,19 +359,22 @@ a {
   background-color: #f8f7f4;
 }
 
-.modal input {
+.modal input,
+..modal textarea {
   font: inherit;
 
   background-color: #ffffff;
   border: 1px solid rgba(178, 178, 178, 0.52);
 }
 
-.modal input:hover {
-  border: 2px solid rgba(154, 154, 154, 0.52);
+.modal input:hover,
+.modal textarea:hover {
+  outline: 2px solid rgba(154, 154, 154, 0.52);
 }
 
-.modal input:focus {
-  border: 2px solid rgba(46, 136, 228, 0.52);
+.modal input:focus,
+.modal textarea:focus {
+  outline: 2px solid rgba(46, 136, 228, 0.52);
 }
 
 
@@ -605,3 +611,210 @@ a {
   font-size: 15px;
   line-height: 18px;
 }
+
+
+/* ---------- Сеточные стили ---------- */
+
+.main-header {
+  border-top: 1px solid transparent;
+  width: 1146px;
+  margin: 0 auto;
+  padding: 0 27px;
+}
+
+.main-navigation {
+  display: flex;
+  flex-direction: column;
+  margin-top: 9px;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.main-navigation-wrapper {
+  display: flex;
+}
+
+.site-navigation {
+  margin: 0;
+  padding: 0;
+  margin-left: 24px;
+}
+
+.user-navigation {
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+}
+
+.worktime {
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+  text-align: right;
+}
+
+
+/* ----- main ----- */
+
+.slider {
+  margin: 0 27px;
+}
+
+.slide p {
+  text-align: center;
+}
+
+.banners {
+  margin: 0 27px;
+  margin-bottom: 40px;
+}
+
+.banners-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+}
+
+.banners-item {
+  width: 560px;
+}
+
+.hits {
+  margin: 0 27px;
+  margin-bottom: 20px;
+}
+
+.hits-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hits-item {
+  width: 267px;
+  min-height: 342px;
+  margin-right: 26px;
+}
+
+.hits-item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.hits-item-price {
+  margin: 0;
+  padding: 0;
+}
+
+.hits-item h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.about-us {
+  margin: 0 27px;
+  margin-bottom: 40px;
+}
+
+.about-us p {
+  margin: 0;
+  padding: 0;
+}
+
+.about-us-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.about-us-item {
+  width: 540px;
+}
+
+.new-post-subscribe-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 27px;
+  margin-bottom: 40px;
+}
+
+.new-post {
+  width: 560px;
+  min-height: 220px;
+}
+
+.subscribe {
+  width: 560px;
+  min-height: 220px;
+}
+
+.main-footer {
+  display: flex;
+  justify-content: space-between;
+  width: 1146px;
+  margin: 0 auto;
+  margin-top: 18px;
+  padding: 0 27px;
+}
+
+.footer-social {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-info {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-copyright {
+  margin: 0;
+  padding: 0;
+}
+
+.modal {
+  width: 1146px;
+  margin: 0 auto;
+}
+
+/* тут временные цветные рамки*/
+.main-header,
+.container,
+.main-footer {
+  outline: 2px solid  rgba(0, 102, 255, 0.7); /*синий*/
+}
+.main-navigation,
+.slider,
+.banners,
+.hits,
+.about-us,
+.new-post,
+.subscribe,
+.map,
+.footer-social,
+.footer-info,
+.footer-copyright {
+  outline: 2px solid  rgba(0, 255, 240, 0.7); /*голубой*/
+}
+.banners-list {
+  outline: 2px solid  rgba(72, 255, 0, 0.7); /*зеленый*/
+}
+.main-navigation-wrapper,
+.new-post-subscribe-wrapper {
+  outline: 2px solid  rgba(255, 75, 0, 0.7); /*оранжевый*/
+}
+.banners-item,
+.hits-item h3 {
+  outline: 2px solid  rgba(255, 0, 246, 0.7); /*сиреневый*/
+}
+
+
+
+
+/*----------------------------*/
