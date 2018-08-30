@@ -183,7 +183,7 @@ input[type="radio"].visually-hidden {
   font-weight: 700;
 }
 
-.sub-menu > li > a :after {
+.sub-menu > li > a::after {
   content: "";
   display: block;
   height: 1px;
@@ -206,6 +206,7 @@ input[type="radio"].visually-hidden {
 }
 
 .user-navigation a {
+  display: block;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
@@ -215,7 +216,6 @@ input[type="radio"].visually-hidden {
   margin-left: 10px;
   margin-top: 14px;
   vertical-align: middle;
-  display: block;
 
   padding: 8px 16px;
   border-radius: 25px;
@@ -249,6 +249,10 @@ input[type="radio"].visually-hidden {
 
 /* ----- MAIN ----- */
 
+.slider {
+  margin-bottom: 61px;
+}
+
 .slide {
   font-weight: 700;
   font-size: 60px;
@@ -273,6 +277,8 @@ input[type="radio"].visually-hidden {
 
 .button-slider {
   list-style: none;
+  display: flex;
+  margin-top: -45px;
 }
 
 .button {
@@ -316,7 +322,7 @@ input[type="radio"].visually-hidden {
 }
 
 .small-button {
-  padding: 8px 35px;
+  padding: 8px 23px;
   padding-bottom: 13px;
   border-radius: 25px;
 }
@@ -339,6 +345,10 @@ input[type="radio"].visually-hidden {
 
 .banners-item {
   width: 560px;
+  min-height: 229px;
+  display: flex;
+  flex-direction: column;
+
 }
 
 .banners-item h3 {
@@ -346,6 +356,9 @@ input[type="radio"].visually-hidden {
   font-size: 35px;
   line-height: 41px;
   color: #ffffff;
+  margin-left: 19px;
+  margin-right: 19px;
+  margin-top: 16px;
 }
 
 .banners-item p {
@@ -353,6 +366,9 @@ input[type="radio"].visually-hidden {
   font-size: 18px;
   line-height: 22px;
   color: #ffffff;
+  margin-left: 19px;
+  margin-right: 19px;
+  margin-top: -20px;
 }
 
 .banner-item-rasb {
@@ -360,6 +376,7 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/raspberry-bg.jpg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  border-radius: 15px;
 }
 
 .banner-item-choc {
@@ -367,29 +384,70 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/chocolate-bg.jpg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  border-radius: 15px;
+}
+
+.banners-item a{
+  align-self: flex-end;
+  margin-top: 27px;
+  margin-right: 20px;
+  margin-bottom: 23px;
 }
 
 
 /* ----- Hits-item section----- */
+.hits {
+  margin: 0 27px;
+  margin-bottom: 20px;
+}
 
 .hits-list {
   list-style: none;
+
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hits-item {
+  width: 267px;
+  min-height: 342px;
+  margin-right: 26px;
+}
+
+.hits-item:nth-child(4n) {
+  margin-right: 0;
 }
 
 .hits-item a {
   color: #ffffff;
 }
 
+.hits-item img {
+  border-radius: 50%;
+}
+
 .hits-item h3 {
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
+
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  margin-top: 19px;
+  margin-bottom: 20px;
 }
 
 .hits-item-price {
   font-weight: 700;
   font-size: 45px;
   line-height: 45px;
+
+  margin: 0;
+  padding: 0;
+  margin-top: -63px;
 }
 
 .hits-item-price span {
@@ -408,11 +466,24 @@ input[type="radio"].visually-hidden {
 
 .about-us {
   color: #323232;
+  margin: 0 27px;
+  margin-bottom: 40px;
+  min-height: 306px;
+  border-radius: 15px;
+  border-top: 1px solid transparent;
 
   background-color: #ece0c6;
   background-image: url("../img/waffle-pattern.jpg");
   background-repeat: repeat-x;
   background-position: 0 0;
+}
+.about-us p {
+  margin: 0;
+  padding: 0;
+  margin-top: 25px;
+  margin-left: 20px;
+  margin-right: 19px;
+  margin-bottom: 20px
 }
 
 .about-us b {
@@ -423,43 +494,91 @@ input[type="radio"].visually-hidden {
 
 .about-us-list {
   list-style: none;
+
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 .about-us-item {
+  box-sizing: border-box;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
+
+  width: 560px;
+  padding-left: 75px;
+  margin-bottom: 22px;
+
+}
+
+.about-us-item:nth-child(2n) {
+  padding-left: 83px;
 }
 
 
 /* ----- New-post article----- */
+.new-post-subscribe-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 0 27px;
+  margin-bottom: 40px;
+
+}
 
 .new-post {
   color: #323232;
+  width: 560px;
+  min-height: 220px;
 
+  border-radius: 15px;
   background-color: #ffffff;
+}
+
+.new-post img {
+  border-radius: 15px;
 }
 
 .new-post p {
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
+
+  margin-top: -203px;
+  margin-left: 20px;
+  margin-right: 19px;
 }
 
 .new-post a {
+  display: inline-block;
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
   color: #323232;
+
+  width: 290px;
+  margin-left: 20px;
+  margin-right: 19px;
+  margin-bottom: 20px;
+  margin-top: -12px;
 }
 
 
 /* ----- Subscribe section----- */
 
 .subscribe {
+  display: flex;
+  flex-direction: column;
   color: #5a5a5a;
+  width: 560px;
+  min-height: 220px;
+  border-radius: 15px;
 
   background-color: #f8f7f4;
+  background-image: linear-gradient(45deg, #92cdff 0%, #92cdff 10%, #f8f7f4 10%, #fe9e90, #f8f7f4);
 }
 
 .subscribe-info {
@@ -475,6 +594,12 @@ input[type="radio"].visually-hidden {
   border: 1px solid rgba(178, 178, 178, 0.52);
 }
 
+.subscribe-button{
+  align-self: flex-end;
+  margin-top: 27px;
+  margin-right: 20px;
+  margin-bottom: 23px;
+}
 
 /* ----- Feedback-form section ----- */
 
@@ -794,88 +919,6 @@ input[type="radio"].visually-hidden {
 
 /* ---------- Сеточные стили ---------- */
 
-
-
-
-
-
-/* ----- main ----- */
-
-
-
-
-
-.hits {
-  margin: 0 27px;
-  margin-bottom: 20px;
-}
-
-.hits-list {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.hits-item {
-  width: 267px;
-  min-height: 342px;
-  margin-right: 26px;
-}
-
-.hits-item:nth-child(4n) {
-  margin-right: 0;
-}
-
-.hits-item-price {
-  margin: 0;
-  padding: 0;
-}
-
-.hits-item h3 {
-  margin: 0;
-  padding: 0;
-}
-
-.about-us {
-  margin: 0 27px;
-  margin-bottom: 40px;
-}
-
-.about-us p {
-  margin: 0;
-  padding: 0;
-}
-
-.about-us-list {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.about-us-item {
-  width: 540px;
-}
-
-.new-post-subscribe-wrapper {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 27px;
-  margin-bottom: 40px;
-}
-
-.new-post {
-  width: 560px;
-  min-height: 220px;
-}
-
-.subscribe {
-  width: 560px;
-  min-height: 220px;
-}
-
 /* ----- footer ----- */
 
 .main-footer {
@@ -999,12 +1042,8 @@ input[type="radio"].visually-hidden {
 }
 .main-navigation,
 .slider,
-.banners,
 .hits,
 .about-us,
-.new-post,
-.subscribe,
-.map,
 .footer-social,
 .footer-info,
 .footer-copyright,
@@ -1015,15 +1054,15 @@ input[type="radio"].visually-hidden {
 .pagination-list {
   outline: 2px solid  rgba(0, 255, 240, 0.7); /*голубой*/
 }
-.banners-list, .site-navigation, .user-navigation
+.site-navigation, .user-navigation
  {
   outline: 2px solid  rgba(72, 255, 0, 0.7); /*зеленый*/
 }
-.main-navigation-wrapper,
-.new-post-subscribe-wrapper {
+.main-navigation-wrapper
+ {
   outline: 2px solid  rgba(255, 75, 0, 0.7); /*оранжевый*/
 }
-.banners-item,
+
 .hits-item h3 {
   outline: 2px solid  rgba(255, 0, 246, 0.7); /*сиреневый*/
 }
