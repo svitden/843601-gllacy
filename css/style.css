@@ -322,8 +322,8 @@ input[type="radio"].visually-hidden {
 }
 
 .small-button {
-  padding: 8px 23px;
-  padding-bottom: 13px;
+  padding: 9px 23px;
+  padding-bottom: 12px;
   border-radius: 25px;
 }
 
@@ -569,22 +569,32 @@ input[type="radio"].visually-hidden {
 
 /* ----- Subscribe section----- */
 
+.subscribe-wrapper {
+  width: 560px;
+  min-height: 220px;
+  border-radius: 15px;
+  background-color: red;
+}
+
 .subscribe {
   display: flex;
   flex-direction: column;
   color: #5a5a5a;
-  width: 560px;
-  min-height: 220px;
-  border-radius: 15px;
 
+  margin: 5px;
+  min-height: 210px;
+  border-radius: 10px;
   background-color: #f8f7f4;
-  background-image: linear-gradient(45deg, #92cdff 0%, #92cdff 10%, #f8f7f4 10%, #fe9e90, #f8f7f4);
 }
 
 .subscribe-info {
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
+
+  margin-top: 29px;
+  margin-left: 21px;
+  margin-right: 19px;
 }
 
 .user-subscribe {
@@ -596,33 +606,80 @@ input[type="radio"].visually-hidden {
 
 .subscribe-button{
   align-self: flex-end;
-  margin-top: 27px;
+  margin-top: -39px;
   margin-right: 20px;
   margin-bottom: 23px;
 }
 
 /* ----- Feedback-form section ----- */
 
+.map {
+  position: relative;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .feedback-form {
+  display: block;
+  box-sizing: border-box;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
 
+  position: absolute;
+  top: 62px;
+  right: 27px;
+  width: 302px;
+  min-height: 305px;
   background-color: #ffffff;
+  margin-left: 871px;
+  margin-top: 0px;
+  border-radius: 15px;
+  padding: 25px;
+}
+
+.feedback-form-address {
+  margin: 0;
+  padding: 0;
+  margin-top: 2px;
 }
 
 .feedback-form-address b {
+  display: inline-block;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
+
+  padding-top: 3px;
+}
+
+.feedback-form-tel {
+  margin: 0;
+  padding: 0;
+  margin-top: 17px;
 }
 
 .feedback-form-tel b {
+  display: inline-block;
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
+
+  margin-bottom: 5x;
+  padding-top: 6px;
 }
 
+.feedback-form-tel span {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.feedback-button
+{
+  margin-top: 25x;
+}
 
 /* ----- FOOTER ----- */
 
@@ -630,6 +687,14 @@ input[type="radio"].visually-hidden {
   font-weight: 400;
   line-height: 18px;
   color: #ffffff;
+
+  display: flex;
+  justify-content: space-between;
+  width: 1146px;
+  min-height: 85px;
+  margin: 0 auto;
+  margin-top: 11px;
+  padding: 0 27px;
 }
 
 .main-footer a {
@@ -637,16 +702,56 @@ input[type="radio"].visually-hidden {
   color: #ffffff;
 }
 
+.footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+
+  width: 267px;
+}
+
+.social-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin-right: 11px;
+  margin-top: 18px;
+
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+}
+
 .footer-info {
   list-style: none;
+
+  margin: 0;
+  padding: 0;
+  width: 560px;
 }
 
 .footer-info b {
   font-weight: 700;
 }
 
+.footer-copyright {
+  margin: 0;
+  padding: 0;
+  width: 267px;
+}
+
+.footer-copyright img {
+  padding-left: 79px;
+}
+
 .footer-copyright p {
   font-size: 12px;
+
+  text-align: right;
+  margin-top: 2px;
 }
 
 .footer-info a:hover,
@@ -655,11 +760,15 @@ input[type="radio"].visually-hidden {
   color: #ffbc9e;
 }
 
+
+
 /* ----- MODALS ----- */
 
 .modal {
   color: #323232;
 
+  width: 1146px;
+  margin: 0 auto;
   background-color: #f8f7f4;
 }
 
@@ -919,48 +1028,6 @@ input[type="radio"].visually-hidden {
 
 /* ---------- Сеточные стили ---------- */
 
-/* ----- footer ----- */
-
-.main-footer {
-  display: flex;
-  justify-content: space-between;
-  width: 1146px;
-  margin: 0 auto;
-  margin-top: 18px;
-  padding: 0 27px;
-}
-
-.footer-social {
-  margin: 0;
-  padding: 0;
-  width: 267px;
-}
-
-.footer-info {
-  margin: 0;
-  padding: 0;
-  width: 560px;
-}
-
-.footer-copyright {
-  margin: 0;
-  padding: 0;
-  width: 267px;
-
-}
-
-.footer-copyright img {
-  padding-left: 76px;
-}
-
-.footer-copyright p {
-  text-align: right;
-}
-
-.modal {
-  width: 1146px;
-  margin: 0 auto;
-}
 
 /* ----- catalog-page ----- */
 
@@ -1054,7 +1121,7 @@ input[type="radio"].visually-hidden {
 .pagination-list {
   outline: 2px solid  rgba(0, 255, 240, 0.7); /*голубой*/
 }
-.site-navigation, .user-navigation
+.site-navigation, .user-navigation, .feedback-form-address b
  {
   outline: 2px solid  rgba(72, 255, 0, 0.7); /*зеленый*/
 }
