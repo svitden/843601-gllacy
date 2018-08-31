@@ -1007,6 +1007,7 @@ input[type="radio"].visually-hidden {
 .modal input:hover,
 .modal textarea:hover {
   outline: none;
+
   box-shadow: 0 0 0 1px rgba(154, 154, 154, 0.52);
   border-radius: 5px;
 }
@@ -1014,6 +1015,7 @@ input[type="radio"].visually-hidden {
 .modal input:focus,
 .modal textarea:focus {
   outline: none;
+
   box-shadow: 0 0 0 1px rgba(46, 136, 228, 0.52);
   border-radius: 5px;
 }
@@ -1119,13 +1121,79 @@ input[type="radio"].visually-hidden {
 /* ----- Feedback modal ----- */
 
 .modal-feedback {
+  position: relative;
+  /*top: 55px;
+  left: 50%;*/
+  box-sizing: border-box;
+  width: 478px;
+  min-height: 443px;
+  margin-bottom: 20px;
+  padding: 24px;
+  padding-top: 17px;
+
+  border-radius: 5px;
   box-shadow: none;
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 18px;
+  height: 18px;
+
+  font-size: 0;
+  border: 0;
+
+  cursor: pointer;
+}
+
+.modal-close::before {
+  content: "";
+
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  width: 18px;
+  height: 17px;
+
+  background-image: url("../img/cross-big.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.modal-feedback p {
+  margin: 0;
+  padding: 0;
 }
 
 .modal-feedback > p {
   font-weight: 500;
   font-size: 24px;
   line-height: 28px;
+
+  margin-bottom: 20px;
+}
+
+.modal-feedback-form p {
+  margin-bottom: 20px;
+}
+
+.modal-feedback-form input {
+  box-sizing: border-box;
+  width: 267px;
+  padding: 10px 15px;
+}
+
+.modal-feedback-form textarea{
+  box-sizing: border-box;
+  width: 428px;
+  padding: 10px 15px;
+}
+
+.feedback-button-send {
+  margin-left: 290px;
 }
 
 
@@ -1135,7 +1203,7 @@ input[type="radio"].visually-hidden {
   color: #ffffff;
 }
 
-/* ----- CATALOG PAGE HEADER ----- */
+/* ----- CATALOG PAGE Header ----- */
 
 .site-navigation-current a{
   font-weight: 700;
@@ -1166,7 +1234,7 @@ input[type="radio"].visually-hidden {
   background-color: #d07058;
 }
 
-/* ----- CATALOG PAGE MAIN ----- */
+/* ----- CATALOG PAGE Main ----- */
 
 .page-title {
   font-weight: 700;
@@ -1451,20 +1519,68 @@ input[type="radio"].visually-hidden {
 
 /* ----- CATALOG PAGE Cart modal ----- */
 
+.modal-cart {
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+
+  margin-bottom: 20px;
+  padding: 20px 15px;
+  width: 540px;
+  min-height: 242px;
+
+  border-radius: 5px;
+}
+
 .modal-cart-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-left: 28px;
 }
 
-.modal-cart {
+.modal-cart-list li{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+
+  margin-bottom: 20px;
+}
+
+.modal-cart-list img {
+  border-radius: 50%;
+
+  margin-right: 12px;
+}
+
+.modal-cart-list h3 {
   font-weight: 400;
   font-size: 13px;
   line-height: 16px;
+  text-align: left;
+
+  margin: 0;
+  padding: 0;
+  width: 220px;
+  margin-right: 26px;
 }
 
-.modal-cart h3 {
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 16px;
+.modal-cart-list p {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.modal-cart p {
+  margin: 0;
+  padding: 0;
+}
+
+.modal-cart a {
+  margin: 0;
+  padding: 0;
 }
 
 .modal-cart-list span {
@@ -1477,39 +1593,31 @@ input[type="radio"].visually-hidden {
   line-height: 18px;
 }
 
+.cart-item-delete {
+  position: absolute;
+  top: 10px;
+  left: -22px;
+  width: 11px;
+  height: 11px;
 
-/* тут временные цветные рамки*/
-.main-header,
-.container,
-/*.main-footer,*/
-.catalog-page,
-.container-catalog-page {
-  outline: 2px solid  rgba(0, 102, 255, 0.7); /*синий*/
-}
-.main-navigation,
-.slider,
-/*.hits,*/
-/*.about-us,*/
-/*.footer-social,
-.footer-info,
-.footer-copyright,*/
-.page-title,
-.breadcrumbs,
-.filters,
-.catalog,
-.pagination-list {
-  outline: 2px solid  rgba(0, 255, 240, 0.7); /*голубой*/
-}
-.site-navigation, .user-navigation
- {
-  outline: 2px solid  rgba(72, 255, 0, 0.7); /*зеленый*/
+  font-size: 0;
+  border: 0;
+
+  cursor: pointer;
 }
 
-{
-  outline: 2px solid  rgba(255, 75, 0, 0.7); /*оранжевый*/
-}
+.cart-item-delete::before {
+  content: "";
 
- {
-  outline: 2px solid  rgba(255, 0, 246, 0.7); /*сиреневый*/
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  width: 11px;
+  height: 11px;
+
+  background-image: url("../img/cross-small.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
