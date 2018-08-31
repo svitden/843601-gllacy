@@ -725,6 +725,18 @@ input[type="radio"].visually-hidden {
   border-radius: 5px;
 }
 
+.user-subscribe:hover,
+.user-subscribe:hover {
+  outline: none;
+  box-shadow: 0 0 0 1px rgba(154, 154, 154, 0.52);
+}
+
+.user-subscribe:focus,
+.user-subscribe:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px rgba(46, 136, 228, 0.52);
+}
+
 .subscribe-button{
   align-self: flex-end;
   margin-top: -45px;
@@ -971,29 +983,14 @@ input[type="radio"].visually-hidden {
 /* ----- MODALS ----- */
 
 .modal {
+  /*position: fixed;*/
   color: #323232;
 
   width: 1146px;
   margin: 0 auto;
+
   background-color: #f8f7f4;
-}
-
-.modal-search {
-  /*display: flex;
-  justify-content: center;
-  align-content: center;*/
-  width: 341px;
-  height: 84px;
-  text-align: center;
-  vertical-align: middle;
-
-  border-radius: 5px;
-}
-
-.search-field {
-  width: 311px;
-  height: 44px;
-  border-radius: 5px;
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 }
 
 .modal input,
@@ -1002,40 +999,128 @@ input[type="radio"].visually-hidden {
   font-size: 14px;
   color: #999999;
 
-  margin-top: 20px;
-
   background-color: #ffffff;
   border: 1px solid rgba(178, 178, 178, 0.52);
+  border-radius: 5px;
 }
 
 .modal input:hover,
 .modal textarea:hover {
-  outline: 2px solid rgba(154, 154, 154, 0.52);
+  outline: none;
+  box-shadow: 0 0 0 1px rgba(154, 154, 154, 0.52);
   border-radius: 5px;
 }
 
 .modal input:focus,
 .modal textarea:focus {
-  outline: 2px solid rgba(46, 136, 228, 0.52);
+  outline: none;
+  box-shadow: 0 0 0 1px rgba(46, 136, 228, 0.52);
   border-radius: 5px;
 }
 
 
+/* ----- Search modal ----- */
+
+.modal-search {
+  /*top: 55px;
+  left: 50%;*/
+
+  width: 341px;
+  min-height: 84px;
+  margin-bottom: 20px;
+  text-align: center;
+
+  border-radius: 5px;
+}
+
+.modal-search-form p{
+  margin: 0;
+  padding: 0;
+}
+
+.modal-search-form input {
+  box-sizing: border-box;
+  width: 311px;
+  margin-top: 20px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  padding-left: 15px;
+}
+
+
 /* ----- Login modal ----- */
+.modal-login {
+  /*top: 55px;
+  left: 50%;*/
+  box-sizing: border-box;
+  width: 277px;
+  min-height: 214px;
+  margin-bottom: 20px;
+  padding: 20px;
+
+  border-radius: 5px;
+}
+
+.modal-login-form p{
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.modal-login-form input {
+  box-sizing: border-box;
+  width: 241px;
+  padding: 10px 15px;
+}
 
 .modal-login-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .modal-login-list a {
   font-weight: 400;
   font-size: 13px;
-  line-height: 24px;
+  line-height: 20px;
   color: #323232;
+}
+
+.modal-login-list a:hover,
+.modal-login-list a:focus,
+.modal-login-list a:active {
+  color: #e84d37;
+}
+
+.modal-login-list a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin-top: -3px;
+
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal-login-list a:hover::after,
+.modal-login-list a:focus::after,
+.modal-login-list a:active::after {
+  background-color: rgba(236, 89, 60, 0.3);
+}
+
+.modal-login-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: flex-start;
 }
 
 
 /* ----- Feedback modal ----- */
+
+.modal-feedback {
+  box-shadow: none;
+}
 
 .modal-feedback > p {
   font-weight: 500;
@@ -1392,4 +1477,39 @@ input[type="radio"].visually-hidden {
   line-height: 18px;
 }
 
+
+/* тут временные цветные рамки*/
+.main-header,
+.container,
+/*.main-footer,*/
+.catalog-page,
+.container-catalog-page {
+  outline: 2px solid  rgba(0, 102, 255, 0.7); /*синий*/
+}
+.main-navigation,
+.slider,
+/*.hits,*/
+/*.about-us,*/
+/*.footer-social,
+.footer-info,
+.footer-copyright,*/
+.page-title,
+.breadcrumbs,
+.filters,
+.catalog,
+.pagination-list {
+  outline: 2px solid  rgba(0, 255, 240, 0.7); /*голубой*/
+}
+.site-navigation, .user-navigation
+ {
+  outline: 2px solid  rgba(72, 255, 0, 0.7); /*зеленый*/
+}
+
+{
+  outline: 2px solid  rgba(255, 75, 0, 0.7); /*оранжевый*/
+}
+
+ {
+  outline: 2px solid  rgba(255, 0, 246, 0.7); /*сиреневый*/
+}
 
