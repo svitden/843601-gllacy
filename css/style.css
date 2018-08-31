@@ -1051,6 +1051,7 @@ input[type="radio"].visually-hidden {
 
   margin: 0;
   padding: 0;
+  margin-bottom: 25px;
 }
 
 .container-catalog-page {
@@ -1074,8 +1075,25 @@ input[type="radio"].visually-hidden {
 }
 
 .breadcrumbs li {
+  position: relative;
   margin-right: 22px;
 }
+
+/*.breadcrumbs li::after {
+  content: "";
+
+  position: absolute;
+  top: 10px;
+  right: -11px;
+
+  width: 6px;
+  height: 12px;
+
+  background-color: yellow;
+  background-image: url("../img/icon-right-small.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}*/
 
 .breadcrumbs a {
   font-weight: 400;
@@ -1122,6 +1140,8 @@ input[type="radio"].visually-hidden {
 }
 
 .filters-list {
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
 
   margin: 0;
