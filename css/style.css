@@ -126,6 +126,7 @@ input[type="radio"].visually-hidden {
   position: relative;
 }
 
+
 /* ----- Sub-menu ----- */
 
 .sub-menu {
@@ -206,7 +207,7 @@ input[type="radio"].visually-hidden {
 }
 
 .user-navigation a {
-  display: block;
+  /*display: block;*/
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
@@ -217,7 +218,7 @@ input[type="radio"].visually-hidden {
   margin-top: 14px;
   vertical-align: middle;
 
-  padding: 8px 16px;
+  padding: 6px 16px;
   border-radius: 25px;
 }
 
@@ -226,6 +227,28 @@ input[type="radio"].visually-hidden {
   color: #323232;
 
   background-color: #f7f6f3;
+}
+
+.login-link,
+.enter-link,
+.basket-link
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-link path{
+  padding: 0;
+  width: 17px;
+  height: 17px;
+}
+
+.enter-link path{
+  width: 21px;
+  height: 19px;
+
+  fill: #ffffff;
 }
 
 .worktime {
@@ -415,6 +438,7 @@ input[type="radio"].visually-hidden {
   width: 267px;
   min-height: 342px;
   margin-right: 26px;
+  /*padding: 7px 12px 21px 12px;*/
 }
 
 .hits-item:nth-child(4n) {
@@ -448,6 +472,8 @@ input[type="radio"].visually-hidden {
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.2);
 
   margin: 0;
   padding: 0;
@@ -857,6 +883,9 @@ input[type="radio"].visually-hidden {
 .footer-info a {
   margin-bottom: 5px;
   padding-left: 23px;
+
+  text-decoration: underline;
+  text-decoration-color: rgba( 255, 255, 255, 0.2);
 }
 
 .footer-info b {
@@ -883,6 +912,8 @@ input[type="radio"].visually-hidden {
 .footer-info a:focus,
 .footer-info a:active {
   color: #ffbc9e;
+  text-decoration: underline;
+  text-decoration-color: rgba( 255, 188, 158, 0.2);
 }
 
 .footer-copyright {
@@ -909,15 +940,18 @@ input[type="radio"].visually-hidden {
   margin-top: 2px;
 }
 
-.footer-copyright span::after {
-  content: "";
-  display: inline-block;
-  height: 1px;
-  margin-top: -1px;
-
-  background-color: rgba(255, 255, 255, 0.2);
+.footer-copyright span {
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.2);
 }
 
+.footer-copyright span:hover,
+.footer-copyright span:focus,
+.footer-copyright span:active {
+  color: #ffbc9e;
+  text-decoration: underline;
+  text-decoration-color: rgba( 255, 188, 158, 0.2);
+}
 
 /* ----- MODALS ----- */
 
@@ -977,30 +1011,70 @@ input[type="radio"].visually-hidden {
   color: #ffffff;
 }
 
+/* ----- CATALOG PAGE HEADER ----- */
 
-/* ----- HEADER ----- */
-
-.site-navigation-current {
+.site-navigation-current a{
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
 
   background-color: #d07058;
+  border-radius: 25px;
 }
 
-/* ----- MAIN ----- */
+.site-navigation-current a::after {
+  display: none;
+}
+.site-navigation-current a:hover::after,
+.site-navigation-current a:focus::after,
+.site-navigation-current a:active::after {
+  display: none;
+}
+
+.site-navigation-current a:hover,
+.site-navigation-current a:focus {
+  color: #ffffff;
+  background-color: #d07058;
+}
+
+.site-navigation-current a:active {
+  color: #ffffff;
+  background-color: #d07058;
+}
+
+/* ----- CATALOG PAGE MAIN ----- */
 
 .page-title {
   font-weight: 700;
   font-size: 35px;
   line-height: 41px;
+
+  margin: 0;
+  padding: 0;
 }
 
+.container-catalog-page {
+  width: 1146px;
+  margin: 0 auto;
+  padding: 0 27px;
+}
 
-/* ----- Breadcrumbs ----- */
+/* ----- CATALOG PAGE Breadcrumbs ----- */
 
 .breadcrumbs {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   list-style: none;
+
+  margin: 0;
+  padding: 0;
+  margin-bottom: 3px;
+  margin-top: -27px;
+}
+
+.breadcrumbs li {
+  margin-right: 22px;
 }
 
 .breadcrumbs a {
@@ -1008,24 +1082,40 @@ input[type="radio"].visually-hidden {
   font-size: 14px;
   line-height: 16px;
   color: #ffffff;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.2);
 }
 
 .breadcrumbs a:hover,
 .breadcrumbs a:focus,
 .breadcrumbs a:active {
   color: #ffbc9e;
+  text-decoration: underline;
+  text-decoration-color: rgba( 255, 188, 158, 0.2);
 }
 
-/* !!! будет без подчёркивания */
-
+.breadcrumbs-current a{
+  text-decoration: none;
+}
 
 .breadcrumbs-current a:hover,
 .breadcrumbs-current a:focus,
 .breadcrumbs-current a:active {
   color: #ffffff;
+  text-decoration: none;
 }
 
-/* ----- Filters section ----- */
+
+/* ----- CATALOG PAGE Filters section ----- */
+
+.filters {
+  margin: 0;
+  padding: 0;
+}
+
+.filters-wrapper {
+  display: flex;
+}
 
 .filter fieldset {
   border: none;
@@ -1033,6 +1123,9 @@ input[type="radio"].visually-hidden {
 
 .filters-list {
   list-style: none;
+
+  margin: 0;
+  padding: 0;
 }
 
 .filter legend {
@@ -1078,15 +1171,30 @@ input[type="radio"].visually-hidden {
 }
 
 
-/* ----- Catalog section ----- */
+/* ----- CATALOG PAGE Catalog section ----- */
 
 .catalog-list {
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
+
+  margin: 0;
+  padding: 0;
 }
 
-.catalog-item:hover {
-  background-color: rgba(248, 247, 244, 0.2);
-  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.2);
+.catalog-item {
+  width: 267px;
+  min-height: 342px;
+  margin-right: 26px;
+  margin-bottom: 10px;
+}
+
+.catalog-item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.catalog-item img {
+  border-radius: 50%;
 }
 
 .catalog-item a {
@@ -1097,12 +1205,29 @@ input[type="radio"].visually-hidden {
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.2);
+
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  margin-top: 21px;
+  margin-bottom: 10px;
 }
 
 .catalog-item-price {
   font-weight: 700;
   font-size: 45px;
   line-height: 45px;
+
+  margin: 0;
+  padding: 0;
+  margin-top: -79px;
+}
+
+.catalog-item-price h3 {
+  margin: 0;
+  padding: 0;
 }
 
 .catalog-item-price span {
@@ -1111,11 +1236,30 @@ input[type="radio"].visually-hidden {
   line-height: 45px;
 }
 
+.catalog-item:hover {
+  background-color: rgba(248, 247, 244, 0.2);
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.2);
+  /*padding: 7px 13px 21px 13px;*/
+}
 
-/* ----- Pagination ----- */
+.catalog-item:hover .catalog-item-button{
+  display: block;
+}
+
+
+.catalog-item-button {
+  display: none;
+  margin: 0 30px 21px 30px;
+  padding: 10px 17px;
+}
+
+/* ----- CATALOG PAGE Pagination ----- */
 
 .pagination-list {
   list-style: none;
+
+  margin: 0;
+  padding: 0;
 }
 
 .pagination-list a {
@@ -1154,7 +1298,7 @@ input[type="radio"].visually-hidden {
 }
 
 
-/* ----- Cart modal ----- */
+/* ----- CATALOG PAGE Cart modal ----- */
 
 .modal-cart-list {
   list-style: none;
@@ -1183,84 +1327,6 @@ input[type="radio"].visually-hidden {
 }
 
 
-/* ---------- Сеточные стили ---------- */
-
-/* ----- catalog-page ----- */
-
-.container-catalog-page {
-  width: 1146px;
-  margin: 0 auto;
-  padding: 0 27px;
-}
-
-.breadcrumbs {
-  margin: 0;
-  padding: 0;
-}
-
-.page-title {
-  margin: 0;
-  padding: 0;
-}
-
-/* ----- filters ----- */
-
-.filters {
-  margin: 0;
-  padding: 0;
-}
-
-.filters-wrapper {
-  display: flex;
-}
-
-.filters-list {
-  margin: 0;
-  padding: 0;
-}
-
-
-
-/* ----- catalog ----- */
-
-.catalog-list {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.catalog-item {
-  width: 267px;
-  min-height: 342px;
-  margin-right: 26px;
-}
-
-.catalog-item:nth-child(4n) {
-  margin-right: 0;
-}
-
-.catalog-item-price {
-  margin: 0;
-  padding: 0;
-}
-
-.catalog-item-price h3 {
-  margin: 0;
-  padding: 0;
-}
-
-.pagination-list {
-  margin: 0;
-  padding: 0;
-}
-
-
-
-
-
-
-
 /* тут временные цветные рамки*/
 .main-header,
 .container,
@@ -1271,7 +1337,7 @@ input[type="radio"].visually-hidden {
 }
 .main-navigation,
 .slider,
-.hits,
+/*.hits,*/
 /*.about-us,*/
 /*.footer-social,
 .footer-info,
@@ -1288,7 +1354,7 @@ input[type="radio"].visually-hidden {
   outline: 2px solid  rgba(72, 255, 0, 0.7); /*зеленый*/
 }
 
- {
+{
   outline: 2px solid  rgba(255, 75, 0, 0.7); /*оранжевый*/
 }
 
