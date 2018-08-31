@@ -702,20 +702,35 @@ input[type="radio"].visually-hidden {
   margin-top: 29px;
   margin-left: 21px;
   margin-right: 19px;
+  margin-bottom: 36px;
+}
+
+.subscribe-form p {
+  margin: 0;
+  padding: 0;
 }
 
 .user-subscribe {
+  box-sizing: border-box;
   font: inherit;
+  width: 368px;
+  height: 44px;
+
+  margin-left: 20px;
+  padding-left: 15px;
+
 
   background-color: #ffffff;
   border: 1px solid rgba(178, 178, 178, 0.52);
+  border-radius: 5px;
 }
 
 .subscribe-button{
   align-self: flex-end;
-  margin-top: -39px;
+  margin-top: -45px;
   margin-right: 20px;
   margin-bottom: 23px;
+  padding: 10px 18px;
 }
 
 /* ----- Feedback-form section ----- */
@@ -963,9 +978,31 @@ input[type="radio"].visually-hidden {
   background-color: #f8f7f4;
 }
 
+.modal-search {
+  /*display: flex;
+  justify-content: center;
+  align-content: center;*/
+  width: 341px;
+  height: 84px;
+  text-align: center;
+  vertical-align: middle;
+
+  border-radius: 5px;
+}
+
+.search-field {
+  width: 311px;
+  height: 44px;
+  border-radius: 5px;
+}
+
 .modal input,
 .modal textarea {
   font: inherit;
+  font-size: 14px;
+  color: #999999;
+
+  margin-top: 20px;
 
   background-color: #ffffff;
   border: 1px solid rgba(178, 178, 178, 0.52);
@@ -974,11 +1011,13 @@ input[type="radio"].visually-hidden {
 .modal input:hover,
 .modal textarea:hover {
   outline: 2px solid rgba(154, 154, 154, 0.52);
+  border-radius: 5px;
 }
 
 .modal input:focus,
 .modal textarea:focus {
   outline: 2px solid rgba(46, 136, 228, 0.52);
+  border-radius: 5px;
 }
 
 
@@ -1071,29 +1110,13 @@ input[type="radio"].visually-hidden {
   margin: 0;
   padding: 0;
   margin-bottom: 3px;
-  margin-top: -27px;
+  margin-top: -26px;
 }
 
 .breadcrumbs li {
   position: relative;
-  margin-right: 22px;
+  margin-right: 8px;
 }
-
-/*.breadcrumbs li::after {
-  content: "";
-
-  position: absolute;
-  top: 10px;
-  right: -11px;
-
-  width: 6px;
-  height: 12px;
-
-  background-color: yellow;
-  background-image: url("../img/icon-right-small.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}*/
 
 .breadcrumbs a {
   font-weight: 400;
@@ -1112,13 +1135,17 @@ input[type="radio"].visually-hidden {
   text-decoration-color: rgba( 255, 188, 158, 0.2);
 }
 
-.breadcrumbs-current a{
+.breadcrumbs-current a,
+.breadcrumbs-arrow a{
   text-decoration: none;
 }
 
 .breadcrumbs-current a:hover,
 .breadcrumbs-current a:focus,
-.breadcrumbs-current a:active {
+.breadcrumbs-current a:active,
+.breadcrumbs-arrow a:hover,
+.breadcrumbs-arrow a:focus,
+.breadcrumbs-arrow a:active {
   color: #ffffff;
   text-decoration: none;
 }
@@ -1137,6 +1164,10 @@ input[type="radio"].visually-hidden {
 
 .filter fieldset {
   border: none;
+  padding: 0;
+  margin: 0;
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
 
 .filters-list {
@@ -1152,15 +1183,30 @@ input[type="radio"].visually-hidden {
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
+
+  margin-left: 16px;
+  margin-bottom: 6px;
 }
 
 .filter-option {
   background-color: rgba(255, 255, 255, 0.2);
+
+  background: rgba(234, 255, 45, 0.2);
 }
 
 .filter-option:hover,
 .filter-option:focus {
   color: #323232;
+}
+
+.filter-select {
+  border: none;
+  /*color: #ffffff;*/
+
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  padding: 6px 13px 6px 15px;
+
 }
 
 .filter-button {
@@ -1346,39 +1392,4 @@ input[type="radio"].visually-hidden {
   line-height: 18px;
 }
 
-
-/* тут временные цветные рамки*/
-.main-header,
-.container,
-/*.main-footer,*/
-.catalog-page,
-.container-catalog-page {
-  outline: 2px solid  rgba(0, 102, 255, 0.7); /*синий*/
-}
-.main-navigation,
-.slider,
-/*.hits,*/
-/*.about-us,*/
-/*.footer-social,
-.footer-info,
-.footer-copyright,*/
-.page-title,
-.breadcrumbs,
-.filters,
-.catalog,
-.pagination-list {
-  outline: 2px solid  rgba(0, 255, 240, 0.7); /*голубой*/
-}
-.site-navigation, .user-navigation
- {
-  outline: 2px solid  rgba(72, 255, 0, 0.7); /*зеленый*/
-}
-
-{
-  outline: 2px solid  rgba(255, 75, 0, 0.7); /*оранжевый*/
-}
-
- {
-  outline: 2px solid  rgba(255, 0, 246, 0.7); /*сиреневый*/
-}
 
