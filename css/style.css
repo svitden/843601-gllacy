@@ -1099,38 +1099,5 @@ input[type="radio"].visually-hidden {
   padding: 0;
 }
 
-/* тут временные цветные рамки*/
-.main-header,
-.container,
-.main-footer,
-.catalog-page,
-.container-catalog-page {
-  outline: 2px solid  rgba(0, 102, 255, 0.7); /*синий*/
-}
-.main-navigation,
-.slider,
-.hits,
-.about-us,
-.footer-social,
-.footer-info,
-.footer-copyright,
-.page-title,
-.breadcrumbs,
-.filters,
-.catalog,
-.pagination-list {
-  outline: 2px solid  rgba(0, 255, 240, 0.7); /*голубой*/
-}
-.site-navigation, .user-navigation, .feedback-form-address b
- {
-  outline: 2px solid  rgba(72, 255, 0, 0.7); /*зеленый*/
-}
-.main-navigation-wrapper
- {
-  outline: 2px solid  rgba(255, 75, 0, 0.7); /*оранжевый*/
-}
 
-.hits-item h3 {
-  outline: 2px solid  rgba(255, 0, 246, 0.7); /*сиреневый*/
-}
 
