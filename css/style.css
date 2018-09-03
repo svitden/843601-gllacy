@@ -200,6 +200,8 @@ input[type="radio"].visually-hidden {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   margin: 0;
   padding: 0;
   margin-left: auto;
@@ -207,7 +209,6 @@ input[type="radio"].visually-hidden {
 }
 
 .user-navigation a {
-  display: inline-block;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
@@ -216,7 +217,6 @@ input[type="radio"].visually-hidden {
   background-color: rgba(255, 255, 255, 0.2);
   margin-left: 10px;
   margin-top: 14px;
-  vertical-align: middle;
 
   padding: 6px 16px;
   border-radius: 25px;
@@ -227,15 +227,6 @@ input[type="radio"].visually-hidden {
   color: #323232;
 
   background-color: #f7f6f3;
-}
-
-.login-link,
-.enter-link,
-.basket-link
-{
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .login-link path{
@@ -250,6 +241,9 @@ input[type="radio"].visually-hidden {
 
   fill: #ffffff;
 }
+
+
+/* ----- Worktime ----- */
 
 .worktime {
   font-weight: 700;
@@ -758,7 +752,7 @@ input[type="radio"].visually-hidden {
 }
 
 .map img {
-  display: inline-block;
+  display: block;
 }
 
 .feedback-form {
@@ -836,7 +830,7 @@ input[type="radio"].visually-hidden {
   width: 1146px;
   min-height: 85px;
   margin: 0 auto;
-  margin-top: 11px;
+  margin-top: 17px;
   padding: 0 27px;
 }
 
@@ -915,7 +909,7 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-info a {
-  margin-bottom: 5px;
+  margin-bottom: 4px;
   padding-left: 23px;
 
   text-decoration: underline;
@@ -1517,9 +1511,9 @@ input[type="radio"].visually-hidden {
   color: #ffffff;
   text-align: center;
 
-
   width: 26px;
-  height: 26px;
+  height: 21px;
+  padding-top: 5px;
 
   border-radius: 50%;
 }
@@ -1535,7 +1529,7 @@ input[type="radio"].visually-hidden {
   background-color: #ffffff;
 }
 
-.pagination-list a::after {
+.pagination-list::after {
   content: "";
 
   position: absolute;
@@ -1544,6 +1538,8 @@ input[type="radio"].visually-hidden {
 
   width: 8px;
   height: 12px;
+
+background-color: red;
 
   background-image: url("../img/icon-right-small.svg");
   background-repeat: no-repeat;
@@ -1588,6 +1584,7 @@ input[type="radio"].visually-hidden {
 
 .modal-cart-list {
   display: inline-block;
+  position: relative;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -1634,18 +1631,12 @@ input[type="radio"].visually-hidden {
   margin-right: 0px;
 }
 
-.modal-cart a {
-  margin: 0;
-  padding: 0;
-}
-
 .modal-cart-list span {
   color: #999999;
 }
 
 .modal-cart-total {
   display: block;
-  position: relative;
   text-align: right;
   margin: 0;
   padding: 0;
@@ -1658,7 +1649,7 @@ input[type="radio"].visually-hidden {
   line-height: 18px;
 }
 
-.modal-cart-total::before {
+.modal-cart-list::after {
   content: "";
   position: absolute;
 
@@ -1667,6 +1658,13 @@ input[type="radio"].visually-hidden {
   left: 0;*/
 
   background-color: rgba(202, 202, 199, 1);
+}
+
+.cart-button {
+  align-self: flex-end;
+  margin-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .cart-item-delete {
@@ -1699,12 +1697,7 @@ input[type="radio"].visually-hidden {
   background-position: 0 0;
 }
 
-.cart-button {
-  align-self: flex-end;
-  margin-top: 27px;
-  margin-right: 20px;
-  margin-bottom: 23px;
-}
+
 
 /* тут временные цветные рамки*/
 .main-header,
