@@ -77,56 +77,59 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset>
+          <fieldset class="ice-cream-fats">
             <legend>Жирность:</legend>
             <ul class="filters-list">
               <li class="filter-option">
-                <input class="filter-input filter-input-radio" id="filter-creamy0%" type="radio" name="creamy-group" value="creamy0%">
+                <input class="visually-hidden filter-input filter-input-radio" id="filter-creamy0%" type="radio" name="creamy-group" value="creamy0%">
                 <label for="filter-creamy0%">0%</label>
               </li>
               <li class="filter-option">
-                <input class="filter-input filter-input-radio" id="filter-creamy10%" type="radio" name="creamy-group" value="creamy10%" checked>
+                <input class="visually-hidden filter-input filter-input-radio" id="filter-creamy10%" type="radio" name="creamy-group" value="creamy10%" checked>
                 <label for="filter-creamy10%">до 10%</label>
               </li>
               <li class="filter-option">
-                <input class="filter-input filter-input-radio" id="filter-creamy-to30%" type="radio" name="creamy-group" value="creamy-to30%">
+                <input class="visually-hidden filter-input filter-input-radio" id="filter-creamy-to30%" type="radio" name="creamy-group" value="creamy-to30%">
                 <label for="filter-creamy-to30%">до 30%</label>
               </li>
               <li class="filter-option">
-                <input class="filter-input filter-input-radio" id="filter-creamy-above30%" type="radio" name="creamy-group" value="creamy-above30%">
+                <input class="visually-hidden filter-input filter-input-radio" id="filter-creamy-above30%" type="radio" name="creamy-group" value="creamy-above30%">
                 <label for="filter-creamy-above30%">выше 30%</label>
               </li>
             </ul>
           </fieldset>
         </div>
 
-        <fieldset>
-          <legend>Наполнители:</legend>
-          <ul class="filters-list">
-            <li class="filter-option">
-              <input class="filter-input filter-input-checkbox" id="filter-chocolate" type="checkbox" name="chocolate" checked>
-              <label for="filter-chocolate">шоколадные</label>
-            </li>
-            <li class="filter-option">
-              <input class="filter-input filter-input-checkbox" id="filter-sugar" type="checkbox" name="sugar" checked>
-              <label for="filter-sugar">сахарные присыпки</label>
-            </li>
-            <li class="filter-option">
-              <input class="filter-input filter-input-checkbox" id="filter-fruit" type="checkbox" name="fruit">
-              <label for="filter-fruit">фрукты</label>
-            </li>
-            <li class="filter-option">
-              <input class="filter-input filter-input-checkbox" id="filter-syrup" type="checkbox" name="syrup">
-              <label for="filter-syrup">сиропы</label>
-            </li>
-            <li class="filter-option">
-              <input class="filter-input filter-input-checkbox" id="filter-jam" type="checkbox" name="jam">
-              <label for="filter-jam">джемы</label>
-            </li>
-          </ul>
-        </fieldset>
+        <div class="filters-wrapper">
+          <fieldset>
+            <legend>Наполнители:</legend>
+            <ul class="filters-list">
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" id="filter-chocolate" type="checkbox" name="chocolate" checked>
+                <label for="filter-chocolate">шоколадные</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" id="filter-sugar" type="checkbox" name="sugar" checked>
+                <label for="filter-sugar">сахарные присыпки</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" id="filter-fruit" type="checkbox" name="fruit">
+                <label for="filter-fruit">фрукты</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" id="filter-syrup" type="checkbox" name="syrup">
+                <label for="filter-syrup">сиропы</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" id="filter-jam" type="checkbox" name="jam">
+                <label for="filter-jam">джемы</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="small-button filter-button" type="submit">Применить</button>
+        </div>
       </form>
-      <button class="filter-button" type="submit">Применить</button>
+
     </section>
 
     <section class="catalog">
