@@ -1429,6 +1429,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
+  align-items: flex-start;
 
   margin: 0;
   padding: 0;
@@ -1471,9 +1472,8 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-select {
+  visibility: hidden;
   border: none;
-  /*color: #ffffff;*/
-
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 25px;
   padding: 6px 13px 6px 15px;
@@ -1487,6 +1487,62 @@ input[type="radio"].visually-hidden {
 
   cursor: pointer;
   user-select: none;
+}
+
+.filter-range {
+  width: 219px;
+}
+
+.range-controls {
+  position: relative;
+
+  height: 20px;
+
+  padding-top: 16px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+}
+
+.range-controls .scale{
+  height: 4px;
+
+  background-color: rgba( 248, 247, 244, 0.5);
+}
+
+.range-controls .bar {
+  margin-right: 55px;
+  margin-left: 24px;
+  height: 4px;
+
+  background: rgba( 248, 247, 244, 1);
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 8px;
+  left: 0;
+
+  width: 4px;
+  height: 4px;
+  padding: 0;
+
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 35px;
+}
+
+.range-controls .toggle-max {
+  left: 134px;
 }
 
 .filter-input-radio + label::before {
@@ -1603,7 +1659,7 @@ input[type="radio"].visually-hidden {
 /* ----- CATALOG PAGE Catalog section ----- */
 
 .catalog {
-  padding: 0 18px;
+  padding: 0 14px;
 }
 
 .catalog-list {

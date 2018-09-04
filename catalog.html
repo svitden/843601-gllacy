@@ -70,12 +70,21 @@
           </fieldset>
           <fieldset>
             <legend>Цена: 100 руб. – 500 руб.</legend>
-            <ul class="filters-list">
+            <ul class="visually-hidden filters-list">
               <li class="filter-option">
                 <label class="visually-hidden" for="price">Цена:</label>
                 <input class="filter-input filter-input-range" id="price" type="range" min="100" max="1000">
               </li>
             </ul>
+            <div class="filter-range">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="toggle toggle-min"></div>
+                <div class="toggle toggle-max"></div>
+              </div>
+            </div>
           </fieldset>
           <fieldset class="ice-cream-fats">
             <legend>Жирность:</legend>
