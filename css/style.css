@@ -87,10 +87,12 @@ input[type="radio"].visually-hidden {
   line-height: 18px;
   color: #ffffff;
 
-  vertical-align: middle;
   margin-top: 14px;
   padding: 7px 14px;
   border-radius: 25px;
+
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.2);
 }
 
 .site-navigation a:hover::after,
@@ -1315,6 +1317,7 @@ input[type="radio"].visually-hidden {
 
   background-color: #d07058;
   border-radius: 25px;
+  text-decoration: none;
 }
 
 .site-navigation-current a::after {
@@ -1335,6 +1338,7 @@ input[type="radio"].visually-hidden {
 .site-navigation-current a:active {
   color: #ffffff;
   background-color: #d07058;
+  box-shadow: none;
 }
 
 /* ----- CATALOG PAGE Main ----- */
@@ -1414,15 +1418,14 @@ input[type="radio"].visually-hidden {
 
 .filters-wrapper {
   display: flex;
-  align-items: center;
 }
 
 .filter fieldset {
   border: none;
   padding: 0;
   margin: 0;
-  margin-right: 20px;
-  margin-bottom: 20px;
+  margin-right: 15px;
+  margin-bottom: 10px;
 }
 
 .filters-list {
@@ -1444,7 +1447,7 @@ input[type="radio"].visually-hidden {
   font-size: 14px;
   line-height: 16px;
 
-  margin-left: 16px;
+  margin-left: 15px;
   margin-bottom: 6px;
 }
 
@@ -1472,12 +1475,28 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-select {
-  visibility: hidden;
+  color: #ffffff;
+
   border: none;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 25px;
   padding: 6px 13px 6px 15px;
 
+}
+
+.filter-select:hover {
+  color: #323232;
+}
+
+.filter-sort .filter-option:last-child {
+  margin-right: 0px;
+}
+
+.filter-sort .filters-list {
+  margin-left: -45px;
+  margin-top: -6px;
+
+  background-color: transparent;
 }
 
 .filter-option label {
@@ -1563,11 +1582,11 @@ input[type="radio"].visually-hidden {
   content: "";
 
   position: absolute;
-  left: -24px;
-  top: 7px;
+  left: -25px;
+  top: 6px;
 
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
 
   background-color: rgba( 255, 255, 255, 0.8);
   border-radius: 50%;
@@ -1625,16 +1644,14 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-button {
+  align-self: center;
   font: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
-  vertical-align: middle;
-  text-align: center;
   color: #ffffff;
 
-  margin-left: -6px;
-  margin-top: 1px;
+  margin-top: 11px;
   padding: 6px 27px;
   background-color: rgba(255, 255, 255, 0.2);
   border: 2px solid rgb(255, 255, 255);
@@ -1659,6 +1676,7 @@ input[type="radio"].visually-hidden {
 /* ----- CATALOG PAGE Catalog section ----- */
 
 .catalog {
+  margin-top: 5px;
   padding: 0 14px;
 }
 
@@ -1754,6 +1772,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  position: relative;
   list-style: none;
 
   margin: 0;
@@ -1795,12 +1814,12 @@ input[type="radio"].visually-hidden {
   background-color: #ffffff;
 }
 
-.pagination-list li:last-child::after {
+.pagination-list li:last-child {
   content: "";
 
   position: absolute;
-  top: 8px;
-  right: -24px;
+  top: 9px;
+  right: 27px;
 
   width: 8px;
   height: 12px;
@@ -1808,6 +1827,28 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/icon-right-small.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+}
+
+.pagination-list li:first-child {
+  content: "";
+
+  position: absolute;
+  top: 9px;
+  right: 210px;
+
+  width: 8px;
+  height: 12px;
+
+  background-image: url("../img/icon-left-small.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  transform: rotate(180deg)
+}
+
+.pagination-list a:last-child:hover,
+.pagination-list a:last-child:focus {
+  background-color: transparent;
 }
 
 .pagination-item-current a {
@@ -1825,6 +1866,19 @@ input[type="radio"].visually-hidden {
   color: #323232;
 
   background-color: #ffffff;
+}
+
+.pagination-list::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+
+  height: 1px;
+  width: 1200px;
+  bottom: -32px;
+  left: 0;
+
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 
@@ -1913,12 +1967,14 @@ input[type="radio"].visually-hidden {
   line-height: 18px;
 }
 
-.modal-cart-list::after {
+.modal-cart .modal-cart-list::after {
   content: "";
+  display: inline-block;
   position: absolute;
 
   height: 1px;
-  top: 0;
+  width: 510px;
+  bottom: -2px;
   left: 0;
 
   background-color: rgba(202, 202, 199, 1);
@@ -1959,39 +2015,4 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/cross-small.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-}
-
-
-
-/* тут временные цветные рамки*/
-/*.main-header,*/
-.container,
-/*.main-footer,*/
-.catalog-page,
-.container-catalog-page {
-  outline: 2px solid  rgba(0, 102, 255, 0.7); /*синий*/
-}
-/*.main-navigation,*/
-.slider,
-/*.hits,*/
-/*.about-us,*/
-/*.footer-social,
-.footer-info,
-.footer-copyright,*/
-/*.page-title,*/
-/*.breadcrumbs,*/
-.filters {
-  outline: 2px solid  rgba(0, 255, 240, 0.7); /*голубой*/
-}
-/*.site-navigation, .user-navigation*/
-{
-  outline: 2px solid  rgba(72, 255, 0, 0.7); /*зеленый*/
-}
-
-{
-  outline: 2px solid  rgba(255, 75, 0, 0.7); /*оранжевый*/
-}
-
-{
-  outline: 2px solid  rgba(255, 0, 246, 0.7); /*сиреневый*/
 }
