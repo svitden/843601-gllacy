@@ -1552,12 +1552,15 @@ input[type="radio"].visually-hidden {
 
 .filter-option {
   display: block;
-  margin-right: 9px;
   padding: 7px 0px 7px 46px ;
 }
 
-.filter-option:last-child {
+.filter-option:last-child:not(:first-child) {
   margin-right: 19px;
+}
+
+.filter-stuffed .filter-option {
+  margin-right: 9px;
 }
 
 .ice-cream-fats .filter-option {
@@ -1968,8 +1971,8 @@ select::-ms-expand {
   transform: rotate(180deg)
 }
 
-.pagination-list a:last-child:hover,
-.pagination-list a:last-child:focus {
+.pagination-list li:first-child a:hover,
+.pagination-list li:last-child a:hover{
   background-color: transparent;
 }
 
@@ -1989,6 +1992,8 @@ select::-ms-expand {
 
   background-color: #ffffff;
 }
+
+/* линия внизу сайта*/
 
 .pagination-list::after {
   content: "";
