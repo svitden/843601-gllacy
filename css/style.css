@@ -109,7 +109,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-wrap: wrap;
 
-  width: 689px;
+  width: 675px;
 }
 
 .site-navigation a {
@@ -233,7 +233,7 @@ input[type="radio"].visually-hidden {
   padding: 0;
   margin-left: auto;
   margin-top: -9px;
-  max-width: 267px;
+  max-width: 290px;
 }
 
 .user-navigation a {
@@ -252,13 +252,14 @@ input[type="radio"].visually-hidden {
 }
 
 .user-navigation a:hover,
-.user-navigation a:focus {
+.user-navigation a:focus,
+.user-navigation a:active {
   color: #323232;
 
   background-color: #f7f6f3;
 }
 
-.user-navigation .login-link {
+.user-navigation .search-link {
   position: relative;
   width: 33px;
   height: 33px;
@@ -270,7 +271,7 @@ input[type="radio"].visually-hidden {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.user-navigation .login-link::before {
+.user-navigation .search-link::before {
   content: "";
 
   position: absolute;
@@ -285,7 +286,8 @@ input[type="radio"].visually-hidden {
   background-position: 0 0;
 }
 
-.user-navigation .login-link:hover::before {
+.user-navigation .search-link:hover::before,
+.user-navigation .search-link:active::before {
   content: "";
 
   position: absolute;
@@ -358,7 +360,8 @@ input[type="radio"].visually-hidden {
   background-position: 0 0;
 }
 
-.user-navigation .basket-link:hover::before {
+.user-navigation .basket-link:hover::before,
+.user-navigation .basket-link:active::before {
   content: "";
 
   position: absolute;
@@ -370,6 +373,48 @@ input[type="radio"].visually-hidden {
   margin-left: 0px;
 
   background-image: url("../img/basket-black.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.user-navigation .basket-full::before {
+  content: "";
+
+  position: absolute;
+  top: 6px;
+  left: 16px;
+
+  width: 21px;
+  height: 20px;
+  margin-left: 0px;
+
+  background-image: url("../img/basket-red.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.user-navigation .basket-full {
+  color: #323232;
+  background-color: #f8f7f4;
+}
+
+.user-navigation .basket-full:hover {
+  color: #323232;
+  background-color: #f8f7f4;
+}
+
+.user-navigation .basket-full:hover::before {
+  content: "";
+
+  position: absolute;
+  top: 6px;
+  left: 16px;
+
+  width: 21px;
+  height: 20px;
+  margin-left: 0px;
+
+  background-image: url("../img/basket-red.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -1225,8 +1270,9 @@ input[type="radio"].visually-hidden {
 /* ----- Search modal ----- */
 
 .modal-search {
-  /*top: 55px;
-  left: 50%;*/
+  top: 59px;
+  left: 50%;
+  margin-left: 18px;
 
   width: 341px;
   min-height: 84px;
@@ -1252,10 +1298,17 @@ input[type="radio"].visually-hidden {
 
 
 /* ----- Login modal ----- */
+.modal {
+  position: fixed;
+  display: none;
+}
+
 .modal-login {
-  /*top: 55px;
-  left: 50%;*/
   box-sizing: border-box;
+
+  top: 59px;
+  left: 50%;
+  margin-left: 185px;
   width: 277px;
   min-height: 214px;
   margin-bottom: 20px;
@@ -1323,12 +1376,15 @@ input[type="radio"].visually-hidden {
 /* ----- Feedback modal ----- */
 
 .modal-feedback {
-  position: relative;
-  /*top: 55px;
-  left: 50%;*/
+  /*position: relative;*/
+
   box-sizing: border-box;
+  top: 220px;
+  left: 50%;
+
   width: 478px;
   min-height: 443px;
+  margin-left: -240px;
   margin-bottom: 20px;
   padding: 24px;
   padding-top: 17px;
@@ -1559,6 +1615,10 @@ input[type="radio"].visually-hidden {
   margin-right: 19px;
 }
 
+.filter-option:focus::before {
+  box-shadow: 0 0 0 1px rgba(46, 136, 228, 0.52);
+}
+
 .filter-stuffed .filter-option {
   margin-right: 9px;
 }
@@ -1598,6 +1658,10 @@ select::-ms-expand {
 
 .filter-select:hover {
   color: #323232;
+}
+
+.filter-select:focus {
+  box-shadow: 0 0 0 1px rgba(46, 136, 228, 0.52);
 }
 
 .filter-select::after {
@@ -1648,6 +1712,10 @@ select::-ms-expand {
 
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 25px;
+}
+
+.range-controls:focus {
+  box-shadow: 0 0 0 1px rgba(46, 136, 228, 0.52);
 }
 
 .range-controls .scale{
@@ -2013,12 +2081,16 @@ select::-ms-expand {
 
 .modal-cart {
   display: flex;
+  display: none;
   flex-direction: column;
   box-sizing: border-box;
   font-weight: 400;
   font-size: 13px;
   line-height: 16px;
 
+  top: 59px;
+  left: 50%;
+  margin-left: 33px;
   margin-bottom: 20px;
   padding: 20px 15px;
   width: 540px;
@@ -2109,7 +2181,7 @@ select::-ms-expand {
 
 .cart-button {
   align-self: flex-end;
-  margin-top: 15px;
+  margin-top: 13px;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -2142,4 +2214,8 @@ select::-ms-expand {
   background-image: url("../img/cross-small.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+}
+
+.modal-show {
+  display: block;
 }
