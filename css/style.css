@@ -1852,6 +1852,21 @@ select::-ms-expand {
   background-position: 0 0;
 }
 
+.filter-sort .filter-option:hover::after {
+  content: "";
+  position: absolute;
+
+  top: 20px;
+  left: 213px;
+
+  width: 11px;
+  height: 10px;
+
+  background-image: url("../img/icon-down-dir-black.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
 .filter-sort .filters-list {
   margin-left: -45px;
   margin-top: -6px;
