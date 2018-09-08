@@ -27,19 +27,19 @@ var isStorageSupport = true;
   }
 */
 
-linkEnter.addEventListener("click", function (evt) {
+linkEnter.addEventListener("mouseover", function (evt) {
     evt.preventDefault();
     popupEnter.classList.toggle("modal-show");
   }
 );
 
-linkSearch.addEventListener("click", function (evt) {
+linkSearch.addEventListener("mouseover", function (evt) {
     evt.preventDefault();
     popupSearch.classList.toggle("modal-show");
   }
 );
 
-linkBasketFull.addEventListener("click", function (evt) {
+linkBasketFull.addEventListener("mouseover", function (evt) {
     evt.preventDefault();
     popupBasket.classList.toggle("modal-show");
   }
