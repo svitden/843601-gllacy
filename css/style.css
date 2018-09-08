@@ -105,6 +105,7 @@ input[type="radio"].visually-hidden {
 }
 
 .container {
+  display: block;
   width: 1200px;
   margin: 0 auto;
 }
@@ -215,6 +216,7 @@ input[type="radio"].visually-hidden {
   padding-left: 20px;
   padding-right: 21px;
   border-radius: 0;
+  text-decoration: none;
 }
 
 .sub-menu a:hover,
