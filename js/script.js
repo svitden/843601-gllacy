@@ -12,11 +12,11 @@ var popupFeedback = document.querySelector(".modal-feedback");
 var closeFeedback = document.querySelector(".modal-close");
 
 var modalOverlay = document.querySelector(".modal-overlay");
-/*
+
 var userName = popupFeedback.querySelector("[name=name]");
 var feedbackEmail = popupFeedback.querySelector("[name=feedback-email]");
 var commentField = popupFeedback.querySelector("[name=comment]");
-
+/*
 var isStorageSupport = true;
   var storage = "";
 
@@ -33,19 +33,22 @@ linkEnter.addEventListener("mouseover", function (evt) {
   }
 );
 
+
+/*
 linkSearch.addEventListener("mouseover", function (evt) {
     evt.preventDefault();
     popupSearch.classList.toggle("modal-show");
   }
 );
-
+*/
 linkBasketFull.addEventListener("mouseover", function (evt) {
     evt.preventDefault();
     popupBasket.classList.toggle("modal-show");
   }
 );
 
-linkFeedback.addEventListener("click", function (evt) {
+if (popupFeedback) {
+  linkFeedback.addEventListener("click", function (evt) {
     evt.preventDefault();
     popupFeedback.classList.add("modal-show");
     modalOverlay.classList.add("modal-show");
@@ -57,8 +60,9 @@ linkFeedback.addEventListener("click", function (evt) {
       userName.focus();
     }*/
     userName.focus();
-  }
-);
+    }
+  );
+}
 
 closeFeedback.addEventListener("click", function (evt) {
     evt.preventDefault();
