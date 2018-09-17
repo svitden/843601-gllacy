@@ -41,7 +41,7 @@ closeFeedback.addEventListener("click", function (evt) {
 });
 
 form.addEventListener("submit", function (evt) {
-  if (!userName.value || !feedbackEmail.value || !commentField) {
+  if (!userName.value || !feedbackEmail.value || !commentField.value) {
     evt.preventDefault();
     popupFeedback.classList.remove("modal-error");
     popupFeedback.offsetWidth = popupFeedback.offsetWidth;
