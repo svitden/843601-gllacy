@@ -85,9 +85,7 @@ input[type="radio"].visually-hidden {
   color: #ffffff;
 
   display: -webkit-box;
-
   display: -ms-flexbox;
-
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -262,6 +260,21 @@ input[type="radio"].visually-hidden {
   background-color: rgba(53, 53, 53, 0.2);
 }
 
+.sub-menu .sub-menu-current {
+  color: #ffffff;
+
+  background-color: #d07058;
+}
+
+.sub-menu .sub-menu-current:hover,
+.sub-menu .sub-menu-current:focus,
+.sub-menu .sub-menu-current:active {
+  color: #ffffff;
+
+  background-color: #d07058;
+}
+
+
 
 /* ----- User-navigation ----- */
 
@@ -272,17 +285,18 @@ input[type="radio"].visually-hidden {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0;
   padding: 0;
   margin-left: auto;
-  margin-top: -9px;
+  margin-top: 14px;
   max-width: 290px;
+}
+
+.user-navigation > li {
+  height: 40px;
 }
 
 .user-navigation a {
@@ -313,7 +327,6 @@ input[type="radio"].visually-hidden {
   width: 33px;
   height: 33px;
   border-radius: 50%;
-  margin-top: 3px;
   padding: 0;
 
 
@@ -476,7 +489,7 @@ input[type="radio"].visually-hidden {
   display: block;
 }
 
-.user-navigation>li:last-child:hover .modal-cart {
+.user-navigation>li:last-child:hover .modal-cart-wrapper {
   display: block;
 }
 
@@ -761,7 +774,7 @@ input[type="radio"].visually-hidden {
 /* ----- Hits-item section----- */
 .hits {
   margin: 0 18px;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .hits-list {
@@ -882,7 +895,7 @@ input[type="radio"].visually-hidden {
   margin-top: 25px;
   margin-left: 20px;
   margin-right: 19px;
-  margin-bottom: 20px
+  margin-bottom: 19px
 }
 
 .about-us b {
@@ -929,8 +942,8 @@ input[type="radio"].visually-hidden {
   content: "";
 
   position: absolute;
-  top: -13px;
-  left: 21px;
+  top: -12px;
+  left: 20px;
 
   width: 49px;
   height: 49px;
@@ -944,7 +957,7 @@ input[type="radio"].visually-hidden {
   content: "";
 
   position: absolute;
-  top: -13px;
+  top: -12px;
   left: 25px;
 
   width: 49px;
@@ -959,8 +972,8 @@ input[type="radio"].visually-hidden {
   content: "";
 
   position: absolute;
-  top: -13px;
-  left: 21px;
+  top: -12px;
+  left: 20px;
 
   width: 49px;
   height: 49px;
@@ -974,7 +987,7 @@ input[type="radio"].visually-hidden {
   content: "";
 
   position: absolute;
-  top: -13px;
+  top: -12px;
   left: 25px;
 
   width: 49px;
@@ -1155,6 +1168,7 @@ input[type="radio"].visually-hidden {
   margin-top: 0px;
   border-radius: 15px;
   padding: 25px;
+  z-index: 2;
 }
 
 .feedback-form-address {
@@ -1203,6 +1217,14 @@ input[type="radio"].visually-hidden {
   display: block;
   margin-top: 25px;
 }
+
+.map iframe {
+  z-index: 1;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
 
 /* ----- FOOTER ----- */
 
@@ -1444,7 +1466,6 @@ input[type="radio"].visually-hidden {
 .modal-search {
   top: 59px;
   left: 50%;
-  margin-left: 18px;
 
   width: 341px;
   min-height: 84px;
@@ -1481,7 +1502,7 @@ input[type="radio"].visually-hidden {
 
   top: 59px;
   left: 50%;
-  margin-left: 185px;
+  margin-left: 167px;
   width: 277px;
   min-height: 214px;
   margin-bottom: 20px;
@@ -1564,7 +1585,7 @@ input[type="radio"].visually-hidden {
   -webkit-box-sizing: border-box;
 
           box-sizing: border-box;
-  top: 220px;
+  top: 200px;
   left: 50%;
 
   width: 478px;
@@ -1709,8 +1730,8 @@ input[type="radio"].visually-hidden {
           text-decoration-color: rgba( 255, 188, 158, 0.2);
 }
 
-.breadcrumbs-current a,
-.breadcrumbs-arrow a {
+.breadcrumbs-current,
+.breadcrumbs-arrow {
   text-decoration: none;
 }
 
@@ -2090,6 +2111,18 @@ select::-ms-expand {
   border: none;
 }
 
+.ice-cream-fats input[type="radio"]:focus + label,
+.ice-cream-fats input[type="radio"]:focus + label::before {
+  -webkit-box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.52);
+          box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.52);
+}
+
+.filter-stuffed input[type="checkbox"]:focus + label,
+.filter-stuffed input[type="checkbox"]:focus + label::before {
+  -webkit-box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.52);
+          box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.52);
+}
+
 
 /* ----- CATALOG PAGE Catalog section ----- */
 
@@ -2332,11 +2365,14 @@ select::-ms-expand {
 
 /* ----- CATALOG PAGE Cart modal ----- */
 
+.modal-cart-wrapper {
+  display: none;
+}
+
 .modal-cart {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -2347,9 +2383,10 @@ select::-ms-expand {
   font-size: 13px;
   line-height: 16px;
 
-  top: 59px;
+  top: 34px;
   left: 50%;
   margin-left: 33px;
+  margin-top: 25px;
   margin-bottom: 20px;
   padding: 20px 15px;
   width: 540px;
@@ -2449,12 +2486,78 @@ select::-ms-expand {
   background-color: rgba(202, 202, 199, 1);
 }
 
-.cart-button {
+.modal-cart .cart-button {
+  display: inline-block;
+  font: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  vertical-align: top;
+  text-align: center;
+  color: #ffffff;
+
+  background-image:
+    -webkit-gradient(linear, left top, left bottom, from(#f26843), to(#e74a35));
+
+  background-image:
+    -webkit-linear-gradient(top, #f26843, #e74a35);
+
+  background-image:
+    -o-linear-gradient(top, #f26843, #e74a35);
+
+  background-image:
+    linear-gradient(to bottom, #f26843, #e74a35);
+  -webkit-box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
+          box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
+  border: none;
+  cursor: pointer;
   -ms-flex-item-align: end;
       align-self: flex-end;
+  padding: 9px 23px;
+  padding-bottom: 12px;
+  border-radius: 25px;
   margin-top: 13px;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.modal-cart .cart-button:hover,
+.modal-cart .cart-button:focus {
+  color: #ffffff;
+
+  background-image:
+    -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.2)), to(rgba(255, 255, 255, 0.2))),
+    -webkit-gradient(linear, left top, left bottom, from(#f26843), to(#e74a35));
+  background-image:
+    -webkit-linear-gradient(top, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+    -webkit-linear-gradient(top, #f26843, #e74a35);
+  background-image:
+    -o-linear-gradient(top, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+    -o-linear-gradient(top, #f26843, #e74a35);
+  background-image:
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+    linear-gradient(to bottom, #f26843, #e74a35);
+  -webkit-box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 1);
+          box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 1);
+}
+
+.modal-cart .cart-button:active {
+  color: #ffffff;
+
+  background-image:
+    -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.07)), to(rgba(0, 0, 0, 0.07))),
+    -webkit-gradient(linear, left top, left bottom, from(#e74a35), to(#f26843));
+  background-image:
+    -webkit-linear-gradient(top, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)),
+    -webkit-linear-gradient(top, #e74a35, #f26843);
+  background-image:
+    -o-linear-gradient(top, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)),
+    -o-linear-gradient(top, #e74a35, #f26843);
+  background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)),
+    linear-gradient(to bottom, #e74a35, #f26843);
+  -webkit-box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 0.004);
+          box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 0.004);
 }
 
 .cart-item-delete {
