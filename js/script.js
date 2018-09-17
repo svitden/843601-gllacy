@@ -1,15 +1,3 @@
-/*
-var linkEnter = document.querySelector(".enter-link");
-var popupEnter = document.querySelector(".modal-login");
-
-var linkSearch = document.querySelector(".search-link");
-var popupSearch = document.querySelector(".modal-search");
-
-var linkBasketFull = document.querySelector(".basket-link");
-var popupBasket = document.querySelector(".modal-cart");
-*/
-
-
 var linkFeedback = document.querySelector(".feedback-button");
 var popupFeedback = document.querySelector(".modal-feedback");
 var closeFeedback = document.querySelector(".modal-close");
@@ -24,26 +12,6 @@ var commentField = popupFeedback.querySelector("[name=comment]");
 var isStorageSupport = true;
 var storage = "";
 
-linkEnter.addEventListener("mouseover", function (evt) {
-    evt.preventDefault();
-    popupEnter.classList.toggle("modal-show");
-  }
-);
-/*
-linkSearch.addEventListener("mouseover", function (evt) {
-    evt.preventDefault();
-    popupSearch.classList.toggle("modal-show");
-  }
-);
-
-if (popupBasket) {
-    linkBasketFull.addEventListener("mouseover", function (evt) {
-      evt.preventDefault();
-      popupBasket.classList.toggle("modal-show");
-    }
-  );
-}
-*/
 try {
   storage = localStorage.getItem("userName");
 } catch (err) {

@@ -469,7 +469,7 @@ input[type="radio"].visually-hidden {
   background-position: 0 0;
 }
 
-.search-link .modal-search {
+.user-navigation>li:hover .modal-search {
   display: block;
 }
 
@@ -1391,7 +1391,6 @@ input[type="radio"].visually-hidden {
 /* ----- MODALS ----- */
 
 .modal {
-  /*position: fixed;*/
   color: #323232;
 
   width: 1146px;
