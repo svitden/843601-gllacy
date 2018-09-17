@@ -31,12 +31,68 @@
         </ul>
 
         <ul class="user-navigation">
-            <li><a class="search-link" href="search-link.html"><span class="visually-hidden">Поиск</span>
-            </a></li>
-            <li><a class="enter-link" href="enter-link.html">
+            <li>
+              <a class="search-link" href="search-link.html"><span class="visually-hidden">Поиск</span>
+              </a>
+              <section class="modal modal-search">
+                <h2 class="visually-hidden">Поиск по сайту</h2>
+                <form class="modal-search-form" action="https://echo.htmlacademy.ru" method="get">
+                  <p>
+                    <label class="visually-hidden" for="search-field">Поле поиска</label>
+                    <input class="search-field" id="search-field" type="search" name="search" placeholder="Что ищем?">
+                  </p>
+                </form>
+              </section>
+            </li>
+            <li>
+              <a class="enter-link" href="enter-link.html">
               Вход
-            </a></li>
-            <li><a class="basket-link basket-full" href="basket-link.html">2 товара</a></li>
+              </a>
+              <section class="modal modal-login">
+                <h2 class="visually-hidden">Личный кабинет</h2>
+
+                <form class="modal-login-form" action="https://echo.htmlacademy.ru" method="post">
+                  <p>
+                    <label class="visually-hidden" for="user-email">Электронная почта</label>
+                    <input class="user-email" id="user-email" type="email" name="email" placeholder="Электронная почта">
+                  </p>
+                  <p>
+                    <label class="visually-hidden" for="user-password">Пароль</label>
+                    <input class="user-password" id="user-password" type="password" name="password" placeholder="Пароль">
+                  </p>
+                </form>
+                <div class="modal-login-wrapper">
+                  <button class="button small-button button-login" type="submit">Войти</button>
+                  <ul class="modal-login-list">
+                    <li><a href="#">Забыли пароль?</a></li>
+                    <li><a href="#">Новая регистрация</a></li>
+                  </ul>
+                </div>
+              </section>
+            </li>
+            <li><a class="basket-link basket-full" href="basket-link.html">2 товара</a>
+              <section class="modal modal-cart">
+                <h2 class="visually-hidden">Товары в корзине</h2>
+                <ul class="modal-cart-list">
+                  <li>
+                    <button class="cart-item-delete" type="button">Удалить</button>
+                    <img src="img/product-1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">
+                    <h3>Пломбир с апельсиновым джемом</h3>
+                    <p>1,5 кг х <span>200 руб.</span></p>
+                    <p class="modal-cart-price">300 руб.</p>
+                  </li>
+                  <li>
+                    <button class="cart-item-delete" type="button">Удалить</button>
+                    <img src="img/product-3.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада<">
+                    <h3>Клубничный пломбир с присыпкой из белого шоколада</h3>
+                    <p>1,5 кг х <span>300 руб.</span></p>
+                    <p>450 руб.</p>
+                  </li>
+                </ul>
+                <p class="modal-cart-total"><b>Итого: 750 руб.</b></p>
+                <a class="button small-button cart-button" href="#">Оформить заказ</a>
+              </section>
+            </li>
           </ul>
       </div>
     </nav>
@@ -328,63 +384,8 @@
 
     </footer>
 
-  <section class="modal modal-cart">
-      <h2 class="visually-hidden">Товары в корзине</h2>
-      <ul class="modal-cart-list">
-        <li>
-          <button class="cart-item-delete" type="button">Удалить</button>
-          <img src="img/product-1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">
-          <h3>Пломбир с апельсиновым джемом</h3>
-          <p>1,5 кг х <span>200 руб.</span></p>
-          <p class="modal-cart-price">300 руб.</p>
-        </li>
-        <li>
-          <button class="cart-item-delete" type="button">Удалить</button>
-          <img src="img/product-3.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада<">
-          <h3>Клубничный пломбир с присыпкой из белого шоколада</h3>
-          <p>1,5 кг х <span>300 руб.</span></p>
-          <p>450 руб.</p>
-        </li>
-      </ul>
-      <p class="modal-cart-total"><b>Итого: 750 руб.</b></p>
-      <a class="button small-button cart-button" href="#">Оформить заказ</a>
-  </section>
+  <div class="modal-overlay"></div>
 
-  <section class="modal modal-login">
-      <h2 class="visually-hidden">Личный кабинет</h2>
-
-      <form class="modal-login-form" action="https://echo.htmlacademy.ru" method="post">
-        <p>
-          <label class="visually-hidden" for="user-email">Электронная почта</label>
-          <input class="user-email" id="user-email" type="email" name="email" placeholder="Электронная почта">
-        </p>
-        <p>
-          <label class="visually-hidden" for="user-password">Пароль</label>
-          <input class="user-password" id="user-password" type="password" name="password" placeholder="Пароль">
-        </p>
-      </form>
-      <div class="modal-login-wrapper">
-        <button class="button small-button button-login" type="submit">Войти</button>
-        <ul class="modal-login-list">
-          <li><a href="#">Забыли пароль?</a></li>
-          <li><a href="#">Новая регистрация</a></li>
-        </ul>
-      </div>
-
-    </section>
-
-    <section class="modal modal-search">
-      <h2 class="visually-hidden">Поиск по сайту</h2>
-      <form class="modal-search-form" action="https://echo.htmlacademy.ru" method="get">
-        <p>
-          <label class="visually-hidden" for="search-field">Поле поиска</label>
-          <input class="search-field" id="search-field" type="search" name="search" placeholder="Что ищем?">
-        </p>
-      </form>
-    </section>
-
-    <div class="modal-overlay"></div>
-
-    <script src="js/script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

@@ -476,6 +476,10 @@ input[type="radio"].visually-hidden {
   display: block;
 }
 
+.user-navigation>li:last-child:hover .modal-cart {
+  display: block;
+}
+
 /* ----- Worktime ----- */
 
 .worktime {
