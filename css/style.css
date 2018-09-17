@@ -473,6 +473,10 @@ input[type="radio"].visually-hidden {
   display: block;
 }
 
+.user-navigation>li:nth-child(2) .modal-login {
+  display: block;
+}
+
 /* ----- Worktime ----- */
 
 .worktime {
@@ -1404,11 +1408,7 @@ input[type="radio"].visually-hidden {
 
 .modal input,
 .modal textarea {
-  font: inherit;
-  font-size: 14px;
-  color: #999999;
 
-  background-color: #ffffff;
   border: 1px solid rgba(178, 178, 178, 0.52);
   border-radius: 5px;
 }
@@ -1455,13 +1455,16 @@ input[type="radio"].visually-hidden {
 }
 
 .modal-search-form input {
+  font-size: 14px;
+  color: #999999;
+
+  background-color: #ffffff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 311px;
   margin-top: 20px;
-  padding: 10px 15px;
+  padding: 12px 15px 16px 15px;
   border-radius: 5px;
-  padding-left: 15px;
 }
 
 

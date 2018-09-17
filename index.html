@@ -54,6 +54,26 @@
                 <li><a class="enter-link" href="enter-link.html">
                   Вход
                   </a>
+                  <section class="modal modal-login">
+                    <h2 class="visually-hidden">Личный кабинет</h2>
+                    <form class="modal-login-form" action="https://echo.htmlacademy.ru" method="post">
+                      <p>
+                        <label class="visually-hidden" for="user-email">Электронная почта</label>
+                        <input class="user-email" id="user-email" type="email" name="email" placeholder="Электронная почта">
+                      </p>
+                      <p>
+                        <label class="visually-hidden" for="user-password">Пароль</label>
+                        <input class="user-password" id="user-password" type="password" name="password" placeholder="Пароль">
+                      </p>
+                    </form>
+                    <div class="modal-login-wrapper">
+                      <button class="button small-button button-login" type="submit">Войти</button>
+                      <ul class="modal-login-list">
+                        <li><a href="#">Забыли пароль?</a></li>
+                        <li><a href="#">Новая регистрация</a></li>
+                      </ul>
+                    </div>
+                  </section>
                 </li>
                 <li><a class="basket-link" href="basket-link.html">Пусто</a>
                 </li>
@@ -233,31 +253,6 @@
           </div>
 
         </footer>
-
-        <section class="modal modal-login">
-          <h2 class="visually-hidden">Личный кабинет</h2>
-
-          <form class="modal-login-form" action="https://echo.htmlacademy.ru" method="post">
-            <p>
-              <label class="visually-hidden" for="user-email">Электронная почта</label>
-              <input class="user-email" id="user-email" type="email" name="email" placeholder="Электронная почта">
-            </p>
-            <p>
-              <label class="visually-hidden" for="user-password">Пароль</label>
-              <input class="user-password" id="user-password" type="password" name="password" placeholder="Пароль">
-            </p>
-          </form>
-          <div class="modal-login-wrapper">
-            <button class="button small-button button-login" type="submit">Войти</button>
-            <ul class="modal-login-list">
-              <li><a href="#">Забыли пароль?</a></li>
-              <li><a href="#">Новая регистрация</a></li>
-            </ul>
-          </div>
-
-        </section>
-
-
 
         <section class="modal modal-feedback">
           <h2 class="visually-hidden">Форма обратной связи</h2>
