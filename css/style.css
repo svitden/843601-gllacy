@@ -1421,7 +1421,7 @@ input[type="radio"].visually-hidden {
 /* ----- MODALS ----- */
 
 .modal {
-  position: fixed;
+  position: absolute;
   display: none;
   color: #323232;
 
@@ -1465,8 +1465,8 @@ input[type="radio"].visually-hidden {
 /* ----- Search modal ----- */
 
 .modal-search {
-  top: 59px;
-  left: 50%;
+  top: 37px;
+  right: 0;
 
   width: 341px;
   min-height: 84px;
@@ -1502,8 +1502,8 @@ input[type="radio"].visually-hidden {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 
-  top: 59px;
-  left: 50%;
+  top: 37px;
+  right: 0;
   width: 277px;
   min-height: 214px;
   margin-bottom: 20px;
@@ -2385,10 +2385,9 @@ select::-ms-expand {
   font-size: 13px;
   line-height: 16px;
 
-  top: 34px;
-  left: 50%;
+  top: 37px;
+  right: 0;
   margin-left: 33px;
-  margin-top: 25px;
   margin-bottom: 20px;
   padding: 20px 15px;
   width: 540px;
