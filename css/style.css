@@ -296,6 +296,7 @@ input[type="radio"].visually-hidden {
 }
 
 .user-navigation > li {
+  position: relative;
   height: 40px;
 }
 
@@ -1470,6 +1471,7 @@ input[type="radio"].visually-hidden {
   width: 341px;
   min-height: 84px;
   margin-bottom: 20px;
+  margin-left: 20px;
   text-align: center;
 
   border-radius: 5px;
@@ -1502,10 +1504,10 @@ input[type="radio"].visually-hidden {
 
   top: 59px;
   left: 50%;
-  margin-left: 167px;
   width: 277px;
   min-height: 214px;
   margin-bottom: 20px;
+  margin-left: 187px;
   padding: 20px;
 
   border-radius: 5px;
